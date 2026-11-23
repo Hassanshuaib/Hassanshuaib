@@ -200,7 +200,7 @@ OUT["T8"] = dict(planted_errors=[
     "E7 tax 0%% unjustified (zakat/CIT)",
     "X1 xlsx: NPV formula discounts t0 (=NPV(0.11,B9:G9))",
     "X2 xlsx: SUM(C4:F4) omits Y5 revenue",
-    "X3 xlsx: G5 EBITDA hard-coded 3,300,000 instead of formula (3,315,469)"],
+    "X3 xlsx: G5 EBITDA hard-coded 3,300,000 instead of formula (3,315,380)"],
     npv_their_inputs=truth["npv_their_method_correct"], npv_stated=truth["npv_stated"],
     their_cashflows_irrs=irr_np(truth["cf"][:5] + [truth["cf"][5] + truth["tv"]]))
 

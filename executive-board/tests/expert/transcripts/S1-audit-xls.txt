@@ -1,0 +1,43 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cfo
+== executive-board:cfo
+    Bash ls -la /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-3
+    SKILL board-finance-pack:audit-xls
+    Bash cd /tmp/claude-0/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-5
+    Bash python3 -I -c " import openpyxl,sys p=sys.argv[1] wb=openpyxl.load_wor
+    Bash boardcalc:doc
+    Bash boardcalc:npv
+    Write board/analyses/calc/2026-11-23-cfo-expansion-model-audit.py
+    Bash python3 -I /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-ae
+    Bash boardcalc:npv
+    Write board/analyses/2026-11-23-cfo-expansion-model-audit.md
+COST_USD 0.73
+=== FINAL ===
+The CFO's audit says the model's NPV of 62.93m (cell B12) shouldn't be used for decisions yet. The timing is wrong, the Year 5 EBITDA is a typed-in number rather than a formula, and 94% of the value comes from assuming 8% growth forever.
+
+The CFO used the audit-xls skill on the whole model and didn't change the original file. The file is one sheet ("Model", A1:G12) that values a single project's cash flows. It has no income statement, balance sheet or cash-flow statement.
+
+**Every formula error found (3 critical, 5 material, 4 informational):**
+
+| # | Cell | Problem | Impact | Fix |
+|---|---|---|---|---|
+| 1 | B12 `=NPV(0.11,B9:G9)` | Excel's NPV treats the first cash flow as one year away, so Y0 and every later year get one extra year of discounting | **Critical.** Shows 62.93m; correct timing gives 69.85m | `=B9+NPV(rate,C9:G9)` |
+| 2 | G8 `=G7*1.08/(0.11-0.08)` | 8% growth forever against an 11% discount rate makes the terminal value 36× Y5 cash flow and 94% of the value. Both rates are typed into the formula | **Critical.** NPV drops to 24.69m at 3% growth, or 21.66m at 2% (with fixes 1 and 3 applied) | Put the rates in input cells and use a realistic growth rate |
+| 3 | G5 `3300000` | A typed-in number replaces `=G4*0.25`, which would give 3,315,380 | **Critical.** It's a silent override, and the terminal value multiplies it 36× | `=G4*margin` |
+| 4 | B11 `=SUM(C4:F4)` | Labelled "5-yr" but leaves out Y5 (G4) | Material. Shows 22.80m; the true total is 36.06m | `=SUM(C4:G4)` |
+| 5 | D4:G4 `=C4*1.45` | 45% yearly growth typed into each formula, with no stated basis | Material | Growth input cell |
+| 6 | C5:F5 `=C4*0.25` | 25% margin typed in, and it stays flat while revenue grows 4.4× | Minor to material | Margin input cell |
+| 7 | G8, B12, A12 | The 11% discount rate is typed into formulas and the label, so it can't be changed in one place | Material | One discount-rate input cell |
+| 8 | Row 7 | "Cash flow" is just EBITDA plus capex. There's no tax or zakat, no working capital and no maintenance capex, including in the terminal value | Material. The cash flows being valued are overstated | Add those rows |
+| 9 | Rows 7, 9 `N()` | These wrappers turn text or errors into 0 without warning | Minor | Use plain references |
+| 10–12 | Whole file | Inputs aren't separated from calculations; units, currency and timing aren't labelled; the file was saved without calculated values | Informational | Add an inputs block and labels |
+
+- **What's clean:** after recalculation there are no #REF! or #DIV/0! errors, circular references, hidden items, named ranges or external links.
+- **Biggest risk:** without the terminal value, the NPV is **−0.64m**. All the value comes from the perpetual-growth assumption.
+- **Checks:** the CFO recalculated a copy in LibreOffice and again independently in Python (they differ by 4e-8). It also cross-checked the NPV with the board calculator and traced every formula cell by cell.
+- **Assumption:** the currency is taken to be SAR from the "Jeddah" title. It doesn't change any finding.
+- **Confidence:** High on the findings. The valuation itself can't be relied on until errors 1–4 and 8 are fixed.
+
+The full audit is in `<test-projects>/x2-audit/board/analyses/2026-11-23-cfo-expansion-model-audit.md`. The calculation script is in `<test-projects>/x2-audit/board/analyses/calc/2026-11-23-cfo-expansion-model-audit.py`.
+
+**Next step:** should the CFO build a corrected copy of the model? It would need your figures for tax and zakat, working capital and maintenance capex, plus the reasoning behind the 45% growth, 25% margin and 11% discount rate. Once it's rebuilt, I'd suggest a CRO review.

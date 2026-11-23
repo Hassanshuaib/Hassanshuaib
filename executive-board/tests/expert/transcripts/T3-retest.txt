@@ -1,5 +1,6 @@
 == MAIN (chief of staff)
     Agent -> executive-board:cfo
+    Agent -> executive-board:cro
 == executive-board:cfo
     Bash boardcalc:doc
     Bash boardcalc:doc
@@ -11,3 +12,97 @@
     Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
     Write board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
     Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash F=/tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e
+    Edit board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Write board/analyses/2026-11-23-cfo-project-a-vs-b.md
+== executive-board:cro
+    Read skills/cro-toolkit/references/independent-review.md
+    Bash boardcalc:list
+    Bash boardcalc:list
+    Bash boardcalc:doc
+    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash boardcalc:compare_projects,mirr,payback
+    Write board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Read board/analyses/2026-11-23-cfo-project-a-vs-b.md
+    Read board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Read board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
+    Edit board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash boardcalc:risk_register
+    Write board/analyses/2026-11-23-cro-review-project-a-vs-b.md
+    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Edit board/analyses/2026-11-23-cro-review-project-a-vs-b.md
+    Edit board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
+    Edit board/analyses/2026-11-23-cro-review-project-a-vs-b.md
+COST_USD 1.69
+=== FINAL ===
+# Project A vs Project B: investment feasibility (fictional case, SAR)
+
+**Bottom line:** Choose Project A. The CFO built the analysis and the CRO rebuilt it independently from your inputs; their figures match exactly. Over the same 12-year period, A creates about 10.7 times as much value per year as B.
+
+**Who worked on it:** the CFO did the full analysis. The CRO then recomputed everything before reading the CFO's work and challenged the modelling choices. They are the same underlying model with different instructions, not two independent experts.
+
+## Project A yearly cash flows
+
+| SAR | t0 | Y1 | Y2 | Y3 | Y4 | Y5 | Y6 |
+|---|---|---|---|---|---|---|---|
+| Revenue | | 3,800,000 | 4,069,800 | 4,358,756 | 4,668,227 | 4,999,672 | 5,354,648 |
+| EBITDA | | 946,000 | 1,039,816 | 1,141,092 | 1,250,383 | 1,368,281 | 1,495,424 |
+| EBIT (after 400k depreciation) | | 546,000 | 639,816 | 741,092 | 850,383 | 968,281 | 1,095,424 |
+| NOPAT (after 20% tax) | | 436,800 | 511,853 | 592,874 | 680,306 | 774,625 | 876,339 |
+| Change in working capital | | (456,000) | (32,376) | (34,675) | (37,137) | (39,773) | (42,597) + 642,558 recovered |
+| After-tax salvage | | | | | | | 160,000 |
+| **Free cash flow** | **(2,400,000)** | **380,800** | **879,477** | **958,199** | **1,043,170** | **1,134,852** | **2,036,300** |
+
+EBIT is positive every year, so the rule that losses can offset other profits never comes into play.
+
+## Results for both projects
+
+| Metric | A | B |
+|---|---|---|
+| NPV at 11% | **1,806,830** | 124,409 |
+| IRR | 29.10% | 16.17% |
+| MIRR (11% finance and reinvestment) | 21.88% | 14.01% |
+| Payback (years) | 3.17 | **2.76** |
+| Discounted payback (years) | 3.94 | **3.50** |
+| PI (PV of inflows ÷ initial outlay) | 1.753 | 1.113 |
+| **Equivalent annual annuity (EAA)** | **427,092** | 40,100 |
+| NPV over 12 years with repeats (A twice, B three times) | 2,772,835 | 260,346 |
+
+The CRO's figures match on all 10 metrics. The 12-year repeat comparison gives the same answer as the EAA.
+
+## Why A, and the economic reasoning
+
+1. **Compare annual value, not raw NPV, because the lives differ.** The projects are mutually exclusive, last 6 and 4 years, and can be repeated. Comparing NPVs directly would compare different time spans. The EAA turns each NPV into an equal amount per year: 427k a year for A against 40k for B. The 12-year repeat comparison confirms it.
+2. **NPV is the measure that tracks shareholder value.** IRR, MIRR and PI measure return per riyal invested, not total value. They can rank projects of different size the wrong way. Here they don't: every measure except payback ranks A first, and the two NPV curves only cross at a discount rate of about 34%, above both IRRs.
+3. **The extra size is worth funding.** A needs SAR 1.3m more than B. That extra investment, taken on its own (A minus B, 12 years), returns 35.9% and adds SAR 2.51m of NPV, far above the 11% cost of capital.
+4. **Payback is the only measure that favours B, and it is a weak guide.** B pays back 0.4 years sooner, but payback ignores A's large cash flows in years 5–6 (about SAR 3.2m) and ignores the time value of money.
+5. **A has much more room for error.** A's NPV stays positive up to a discount rate of 29% and survives a 43% fall in inflows. B turns negative if its inflows fall about 10%. If A is used only once and B is repeated forever, A still wins (1.81m against about 0.36m), so the repeat assumption doesn't decide the choice.
+
+## Points the CRO added
+
+- **Funding:** A needs about **2.86m**, not 2.4m, once working capital is counted. If the Y1 working capital has to be in place before first sales, A's NPV falls by 58.7k (3.2%) and the ranking doesn't change.
+- **The biggest risk is volume and price falling together.** The CFO tested each driver on its own. The CRO found that if Y1 volume and price fall together to 32,000 units at SAR 85, A's annual value drops to 15k, below B's 40k. The CRO's probability estimates are illustrative, based on ranges it chose itself: about a 13% chance A's NPV is below zero, and about 19% that A ends up worse than B.
+- **How much the repeat assumption matters:** the CFO labelled it critical. The CRO says it isn't, because A wins even without repeats. I agree with the CRO.
+
+## Recommendation
+
+Choose A. Confidence is **High** that A beats B and **Medium** on the size of the NPV. Three conditions:
+
+1. Arrange funding of at least **2.9m**, including working capital.
+2. Get demand evidence that Y1 can reach about 34,000 units at SAR 90 or more together, for example letters of intent.
+3. Have a licensed tax/zakat adviser confirm the 20% tax rate and that losses can be offset.
+
+**Reconsider if** Y1 volume falls below about 29,000 units, price falls below about SAR 70, variable costs rise above about 69% of revenue, or any two of these move against you at once.
+
+**Your call:** should I treat this as a proposed decision and create a `board/` folder for this project to record it (decision record, assumptions, actions)? I can also have the Secretary turn it into a DOCX or XLSX report.
+
+Files are in `<test-projects>/x2-T3/board/analyses/`:
+- `2026-11-23-cfo-project-a-vs-b.md`
+- `2026-11-23-cro-review-project-a-vs-b.md`
+- `calc/` (the calculation scripts)
