@@ -1,6 +1,6 @@
 == MAIN (chief of staff)
     Agent -> executive-board:cfo
-    Bash ls -la /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-3
+    Bash ls -la <scratch>
 == executive-board:cfo
     Bash boardcalc:recalc_compare,three_statement,three_statement_xlsx
     Grep
@@ -11,13 +11,13 @@
     Bash boardcalc:recalc_compare
     Bash boardcalc:recalc_compare
     Write board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
     Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
     Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Bash python3 -c " r0=24e6;c0=r0*0.62;r1=28.32e6;c1=r1*0.62 d0=dict(dso=2.6e
     Write board/analyses/2026-11-23-cfo-alwaha-3statement.md
 COST_USD 1.12

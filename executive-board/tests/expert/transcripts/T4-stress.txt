@@ -3,11 +3,11 @@
     Bash python3 -c " r=0.11;rev=[40000*1.05**i*95*1.02**i for i in range(6)];f
 == executive-board:cfo
     Bash boardcalc:irr,list,npv,payback
-    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash B=<repo>/executive-board/scripts/boardcalc.py; python
     Bash boardcalc:irr,list,npv,payback
     Bash boardcalc:irr,npv,payback
     Write board/analyses/calc/2026-11-23-cfo-project-a-stress-test.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Write board/analyses/2026-11-23-cfo-project-a-stress-test.md
 COST_USD 0.77
 === FINAL ===

@@ -2,13 +2,13 @@
     Agent -> executive-board:cso
 == executive-board:cso
     Bash boardcalc:decision_matrix,hhi,market_sizing
-    Bash C=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash C=<repo>/executive-board/scripts/boardcalc.py; python
     Bash boardcalc:decision_matrix,hhi,market_sizing
     Bash boardcalc:list
     Grep
-    Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
+    Bash mkdir -p <scratch>
     Write board/analyses/calc/2026-11-23-cso-office-coffee.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Write board/analyses/2026-11-23-cso-office-coffee.md
 COST_USD 0.67
 === FINAL ===

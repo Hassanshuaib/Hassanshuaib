@@ -8,15 +8,15 @@ TOOL CALLS:
   MAIN Agent: executive-board:coo
     sub>Bash: cat board/analyses/2026-11-23-cfo-investment-300k.md board/analyses/2026-11-23-coo-ops-challenge.md; ls board/
     sub>Bash: cd <test-projects>/najm-cafe/bo
-    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>Read: <claude-config>
     sub>Bash: cd <test-projects>/najm-cafe/bo
     sub>Bash: cat <test-projects>/najm-cafe/b
   MAIN Agent: executive-board:cmo
-    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>Read: <claude-config>
     sub>Bash: cd <test-projects>/najm-cafe/bo
     sub>Bash: cd <test-projects>/najm-cafe/bo
   MAIN Agent: executive-board:cso
-    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>Read: <claude-config>
     sub>Bash: cd <test-projects>/najm-cafe/bo
     sub>WebSearch: 
     sub>Bash: cd <test-projects>/najm-cafe/bo
@@ -27,7 +27,7 @@ TOOL CALLS:
     sub>Bash: cd <test-projects>/najm-cafe/bo
     sub>Bash: cat board/analyses/2026-11-23-cfo-investment-300k.md board/analyses/2026-11-23-coo-ops-challenge.md; cat board
     sub>Bash: cd <test-projects>/najm-cafe/bo
-    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>Read: <claude-config>
     sub>WebFetch: 
     sub>WebSearch: 
     sub>WebSearch: 

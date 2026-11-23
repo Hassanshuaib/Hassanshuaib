@@ -10,7 +10,7 @@ Formulas per year t=1..6:
   NPV = sum CF_t/1.11^t.
 """
 import sys, json, random, statistics as st
-sys.path.insert(0, "/home/user/Hassanshuaib/executive-board/scripts")
+sys.path.insert(0, "<repo>/executive-board/scripts")
 import boardcalc as bc
 
 BASE = dict(V1=40000, P1=95.0, vc=0.58, F1=650000.0, capex=2400000.0)

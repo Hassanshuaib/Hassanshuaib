@@ -9,7 +9,7 @@ Formulas:
 Manual model is cross-checked against boardcalc.dcf / capm / wacc / unlever_beta / relever_beta.
 """
 import sys
-sys.path.insert(0, "/home/user/Hassanshuaib/executive-board/scripts")
+sys.path.insert(0, "<repo>/executive-board/scripts")
 import boardcalc as bc
 
 # ---- Inputs (CEO) ----

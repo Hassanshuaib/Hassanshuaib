@@ -189,7 +189,7 @@ def model(INP):
 py = model(INP)
 
 # boardcalc cross-check (its loss carry-forward is irrelevant if EBT > 0 every year)
-sys.path.insert(0, "/home/user/Hassanshuaib/executive-board/scripts")
+sys.path.insert(0, "<repo>/executive-board/scripts")
 bcres = None
 try:
     import boardcalc as bc

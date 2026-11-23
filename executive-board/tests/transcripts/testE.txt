@@ -3,7 +3,7 @@ TOOL CALLS:
   MAIN Skill: executive-board:board-report
   MAIN Agent: executive-board:secretary
     sub>Bash: P=<test-projects>/najm-cafe; ls
-    sub>Read: /home/user/Hassanshuaib/executive-board/scripts/make_report.py
+    sub>Read: <repo>/executive-board/scripts/make_report.py
     sub>Bash: P=<test-projects>/najm-cafe; ls
     sub>Read: <test-projects>/najm-cafe/board
     sub>Read: <test-projects>/najm-cafe/board
@@ -22,35 +22,35 @@ TOOL CALLS:
     sub>Bash: ls -la <test-projects>/najm-caf
     sub>Write: <test-projects>/najm-cafe/board
     sub>Write: <test-projects>/najm-cafe/board
-    sub>Bash: python3 /home/user/Hassanshuaib/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
+    sub>Bash: python3 <repo>/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
     sub>Edit: <test-projects>/najm-cafe/board
-    sub>Bash: python3 /home/user/Hassanshuaib/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
+    sub>Bash: python3 <repo>/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
     sub>Bash: cd <test-projects>/najm-cafe/bo
     sub>Bash: ls -la <test-projects>/najm-caf
     sub>Bash: python3 -c "
 import docx,openpyxl
-R='/tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e16556
+R='<scratch>
     sub>Bash: pdffonts <test-projects>/najm-c
-    sub>Bash: python3 /home/user/Hassanshuaib/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
+    sub>Bash: python3 <repo>/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
     sub>Bash: python3 -c "
 import docx,openpyxl
-R='/tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e16556
+R='<scratch>
     sub>Bash: ls -la <test-projects>/najm-caf
     sub>Bash: pdfinfo <test-projects>/najm-ca
     sub>Bash: python3 -c "
 import re
-b=open('/tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e16556c/scra
-    sub>Bash: pdftoppm -r 60 -f 1 -l 2 -png /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e16556c/scrat
+b=open('<scratch>
+    sub>Bash: pdftoppm -r 60 -f 1 -l 2 -png <scratch>
     sub>Bash: python3 -c "
 import fitz
-d=fitz.open('/tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e1655
+d=fitz.open('<scratch>
     sub>Bash: soffice --headless --convert-to png --outdir <agent-scratchpad>
     sub>Edit: <test-projects>/najm-cafe/board
     sub>Edit: <test-projects>/najm-cafe/board
-    sub>Bash: python3 /home/user/Hassanshuaib/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
+    sub>Bash: python3 <repo>/executive-board/scripts/make_report.py --input board/reports/2026-11-23-invest
     sub>Bash: python3 -c "
 import re,docx,openpyxl
-R='/tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e16
+R='<scratch>
   MAIN Bash: ls -la <test-projects>/najm-caf
   MAIN Read: <test-projects>/najm-cafe/board
 cost_usd: 9.451396400000004 turns: 3 dur_s: 24

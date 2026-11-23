@@ -7,7 +7,7 @@ import json
 import os
 import sys
 
-sys.path.insert(0, "/home/user/Hassanshuaib/executive-board/scripts")
+sys.path.insert(0, "<repo>/executive-board/scripts")
 import boardcalc as bc  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))

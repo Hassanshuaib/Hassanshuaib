@@ -2,20 +2,20 @@
     Agent -> executive-board:cfo
 == executive-board:cfo
     Bash boardcalc:grid,irr,list,npv,payback
-    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash B=<repo>/executive-board/scripts/boardcalc.py; python
     Bash boardcalc:irr,list,npv,payback
-    Bash python3 -c " import sys,inspect; sys.path.insert(0,'/home/user/Hassans
+    Bash python3 -c " import sys,inspect; sys.path.insert(0,'<repo>
     Bash grep -n "def _resolve_model\|callable(model\|def _model\|MODELS\s*=" /
     Grep
     Grep
-    Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
+    Bash mkdir -p <scratch>
     Write board/analyses/calc/2026-11-23-cfo-second-food-truck.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Bash boardcalc:payback
-    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Bash cd <scratch>
     Bash boardcalc:breakeven_input,irr,montecarlo
     Bash boardcalc:breakeven_input,irr,montecarlo
-    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Bash cd <scratch>
     Write board/analyses/2026-11-23-cfo-second-food-truck.md
 COST_USD 0.95
 === FINAL ===

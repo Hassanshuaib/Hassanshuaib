@@ -1,8 +1,8 @@
 session: 1b57e91a-ee09-4b3b-bf50-4430d30d7917
 TOOL CALLS:
   MAIN Skill: executive-board:board-memory
-  MAIN Bash: python3 "/home/user/Hassanshuaib/executive-board/scripts/init_board.py" --project-dir "$PWD" --name "Najm Cafe
-  MAIN Bash: python3 /home/user/Hassanshuaib/executive-board/scripts/init_board.py --project-dir /tmp/claude-0/-home-user-H
+  MAIN Bash: python3 "<repo>/executive-board/scripts/init_board.py" --project-dir "$PWD" --name "Najm Cafe
+  MAIN Bash: python3 <repo>/executive-board/scripts/init_board.py --project-dir <scratch>
   MAIN Bash: cd <test-projects>/najm-cafe; l
   MAIN Bash: git -C <test-projects>/najm-caf
   MAIN Read: <test-projects>/najm-cafe/board

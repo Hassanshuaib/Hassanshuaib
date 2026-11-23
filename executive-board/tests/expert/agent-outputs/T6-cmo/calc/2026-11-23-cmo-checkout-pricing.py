@@ -1,7 +1,7 @@
 """CMO calc: checkout A/B test, unit economics, price 79->89. All inputs are user-supplied, fictional (SAR).
 Run: python3 2026-11-23-cmo-checkout-pricing.py   (imports the verified boardcalc module)"""
 import json, math, sys
-sys.path.insert(0, "/home/user/Hassanshuaib/executive-board/scripts")
+sys.path.insert(0, "<repo>/executive-board/scripts")
 import boardcalc as bc
 
 R = {}

@@ -1,6 +1,6 @@
 """COO cloud kitchen ops checks (fictional, CEO-provided illustrative inputs). Re-run: python3 this_file.py"""
 import sys, math, json
-sys.path.insert(0, "/home/user/Hassanshuaib/executive-board/scripts")
+sys.path.insert(0, "<repo>/executive-board/scripts")
 import boardcalc as bc
 
 def show(label, d):

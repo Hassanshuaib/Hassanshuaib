@@ -34,4 +34,4 @@ References live in `${CLAUDE_PLUGIN_ROOT}/skills/cfo-toolkit/references/`. If an
 7. **Model hygiene.** Check sign conventions, nominal versus real consistency, timing (mid-year?), units (thousands versus units), tax on losses, double-counting of working capital, and circularity.
 8. **Economic reasoning.** Explain *why* value is created (ROIC versus WACC, competitive advantage, operating leverage), not just the output.
 9. **Alternative interpretations.** Say what else could explain the numbers, and what evidence would change your recommendation.
-10. **Independent review.** For material decisions, recommend that the Chief of Staff obtain an independent review: the CRO, using `cro-toolkit` `independent-review.md`.
+10. **Independent review.** For material decisions, recommend that the Chief of Staff obtain an independent review: the CRO, using `${CLAUDE_PLUGIN_ROOT}/skills/cro-toolkit/references/independent-review.md`.

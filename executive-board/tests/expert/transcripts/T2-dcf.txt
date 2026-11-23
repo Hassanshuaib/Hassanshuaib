@@ -1,14 +1,14 @@
 == MAIN (chief of staff)
     Agent -> executive-board:cfo
 == executive-board:cfo
-    Bash cd /home/user/Hassanshuaib/executive-board/scripts && for f in unlever
+    Bash cd <repo>/executive-board/scripts && for f in unlever
     Bash boardcalc:capm,dcf,relever_beta,unlever_beta,wacc
-    Bash sed -n '1,400p' /home/user/Hassanshuaib/executive-board/scripts/boardc
+    Bash sed -n '1,400p' <repo>/executive-board/scripts/boardc
     Grep
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
-    Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
+    Read <repo>/executive-board/scripts/boardcalc.py
+    Bash mkdir -p <scratch>
     Write board/analyses/calc/2026-11-23-cfo-najd-dcf.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Write board/analyses/2026-11-23-cfo-najd-dcf.md
 COST_USD 0.71
 === FINAL ===

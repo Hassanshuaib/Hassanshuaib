@@ -8,34 +8,34 @@
     Read skills/cfo-toolkit/references/capital-budgeting.md
     Bash boardcalc:list,project
     Bash cd /tmp; python3 -c " import sys,inspect; sys.path.insert(0,'/home/use
-    Bash python3 -c " import sys,inspect; sys.path.insert(0,'/home/user/Hassans
-    Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
+    Bash python3 -c " import sys,inspect; sys.path.insert(0,'<repo>
+    Bash mkdir -p <scratch>
     Write board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
-    Bash F=/tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34e
+    Bash python3 <scratch>
+    Bash F=<scratch>
     Edit board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Write board/analyses/2026-11-23-cfo-project-a-vs-b.md
 == executive-board:cro
     Read skills/cro-toolkit/references/independent-review.md
     Bash boardcalc:list
     Bash boardcalc:list
     Bash boardcalc:doc
-    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash B=<repo>/executive-board/scripts/boardcalc.py; python
     Bash boardcalc:compare_projects,mirr,payback
     Write board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
-    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Bash python3 <scratch>
+    Bash cd <scratch>
     Read board/analyses/2026-11-23-cfo-project-a-vs-b.md
     Read board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
-    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Bash cd <scratch>
     Read board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
     Edit board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Bash boardcalc:risk_register
     Write board/analyses/2026-11-23-cro-review-project-a-vs-b.md
-    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
-    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Bash cd <scratch>
+    Bash cd <scratch>
     Edit board/analyses/2026-11-23-cro-review-project-a-vs-b.md
     Edit board/analyses/calc/2026-11-23-cro-review-project-a-vs-b.py
     Edit board/analyses/2026-11-23-cro-review-project-a-vs-b.md

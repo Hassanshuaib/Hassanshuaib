@@ -1,16 +1,16 @@
 == MAIN (chief of staff)
     Agent -> executive-board:coo
 == executive-board:coo
-    Bash cd /home/user/Hassanshuaib/executive-board/scripts; for f in erlang_c 
+    Bash cd <repo>/executive-board/scripts; for f in erlang_c 
     Bash boardcalc:eoq,erlang_c,oee,safety_stock,staff_for_service_level
     Bash boardcalc:list
-    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash B=<repo>/executive-board/scripts/boardcalc.py; python
     Bash boardcalc:eoq,erlang_c,oee,safety_stock,staff_for_service_level
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Read <repo>/executive-board/scripts/boardcalc.py
     Grep
     Bash boardcalc:_clean,capacity,eoq,erlang_c,oee,safety_stock,staff_for_service_level
     Write board/analyses/calc/2026-11-23-coo-cloud-kitchen-ops.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
     Write board/analyses/2026-11-23-coo-cloud-kitchen-ops.md
     Edit board/analyses/2026-11-23-coo-cloud-kitchen-ops.md
     Edit board/analyses/2026-11-23-coo-cloud-kitchen-ops.md

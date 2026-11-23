@@ -10,7 +10,7 @@ Formulas:
   EAA = NPV / [(1-(1+r)^-n)/r]; Chain(12y) = NPV * sum_k (1+r)^(-k*n), k=0..12/n-1
 """
 import sys
-sys.path.insert(0, "/home/user/Hassanshuaib/executive-board/scripts")
+sys.path.insert(0, "<repo>/executive-board/scripts")
 import boardcalc as bc
 
 R, T = 0.11, 0.20

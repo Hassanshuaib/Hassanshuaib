@@ -2,7 +2,7 @@
 Uses boardcalc.py (cso-toolkit) and cross-checks every figure with independent arithmetic."""
 import json, subprocess, itertools
 
-CALC = "/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py"
+CALC = "<repo>/executive-board/scripts/boardcalc.py"
 def bc(fn, payload):
     return json.loads(subprocess.run(["python3", CALC, fn, json.dumps(payload)],
                                      capture_output=True, text=True, check=True).stdout)

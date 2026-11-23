@@ -1,14 +1,14 @@
 == MAIN (chief of staff)
     Agent -> executive-board:cfo
 == executive-board:cfo
-    Bash ls -la /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-3
+    Bash ls -la <scratch>
     SKILL board-finance-pack:audit-xls
-    Bash cd /tmp/claude-0/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-5
+    Bash cd <scratch>
     Bash python3 -I -c " import openpyxl,sys p=sys.argv[1] wb=openpyxl.load_wor
     Bash boardcalc:doc
     Bash boardcalc:npv
     Write board/analyses/calc/2026-11-23-cfo-expansion-model-audit.py
-    Bash python3 -I /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-ae
+    Bash python3 -I <scratch>
     Bash boardcalc:npv
     Write board/analyses/2026-11-23-cfo-expansion-model-audit.md
 COST_USD 0.73

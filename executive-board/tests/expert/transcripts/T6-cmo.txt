@@ -1,23 +1,23 @@
 == MAIN (chief of staff)
     Agent -> executive-board:cmo
 == executive-board:cmo
-    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash B=<repo>/executive-board/scripts/boardcalc.py; python
     Bash boardcalc:list
-    Bash cd /home/user/Hassanshuaib/executive-board/scripts; for f in ab_test a
+    Bash cd <repo>/executive-board/scripts; for f in ab_test a
     Bash boardcalc:ab_sample_size,ab_test,ltv,norm_cdf,price_change_breakeven,subscription_price_change
     Bash boardcalc:ab_sample_size,ab_test,ltv,price_change_breakeven,subscription_price_change
     Grep
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
-    Bash ls /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Read <repo>/executive-board/scripts/boardcalc.py
+    Read <repo>/executive-board/scripts/boardcalc.py
+    Read <repo>/executive-board/scripts/boardcalc.py
+    Bash ls <scratch>
     Write board/analyses/calc/2026-11-23-cmo-checkout-pricing.py
     Bash boardcalc:ab_test
     Write board/analyses/2026-11-23-cmo-checkout-pricing.md
     Bash boardcalc:norm_cdf
     Edit board/analyses/2026-11-23-cmo-checkout-pricing.md
     Edit board/analyses/calc/2026-11-23-cmo-checkout-pricing.py
-    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 <scratch>
 COST_USD 0.8
 === FINAL ===
 I wouldn't roll out the variant yet: the "+12%" result isn't statistically significant. The price rise to 89 has room to absorb some extra churn, but test it on new signups before rolling it out.

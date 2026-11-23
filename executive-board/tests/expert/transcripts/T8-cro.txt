@@ -8,26 +8,26 @@
     Read skills/cro-toolkit/references/independent-review.md
     Read board/analyses/2026-11-20-cfo-expansion.md
     Bash find . -type f | head -50 && cat board/context.md
-    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
-    Bash python3 -I -c " import openpyxl f='/tmp/claude-0/-home-user-Hassanshua
+    Bash cd <scratch>
+    Bash python3 -I -c " import openpyxl f='<scratch>
     Read board/assumptions.md
-    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash B=<repo>/executive-board/scripts/boardcalc.py; python
     Read skills/cfo-toolkit/references/model-review.md
     Bash boardcalc:list
-    Bash cd /home/user/Hassanshuaib/executive-board/scripts && for f in npv irr
+    Bash cd <repo>/executive-board/scripts && for f in npv irr
     Bash boardcalc:breakeven_input,montecarlo,project,recalc_compare,stress
     Grep
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Read <repo>/executive-board/scripts/boardcalc.py
     Bash which soffice libreoffice; grep -n "^def _bisect\|^def _f\|^def _clean
     Bash which soffice libreoffice || echo "no soffice"
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
-    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Read <repo>/executive-board/scripts/boardcalc.py
+    Read <repo>/executive-board/scripts/boardcalc.py
+    Read <repo>/executive-board/scripts/boardcalc.py
     Write board/analyses/calc/2026-11-23-cro-review-expansion.py
-    Bash python3 -I /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-ae
+    Bash python3 -I <scratch>
     Bash boardcalc:irr,mirr,npv
     Write <scratch>
-    Bash python3 -I /tmp/claude-0/-tmp-claude-0--home-user-Hassanshuaib-bd082b9
+    Bash python3 -I <scratch>
     Bash boardcalc:risk_register
     Write board/analyses/2026-11-23-cro-review-expansion.md
 COST_USD 1.18
