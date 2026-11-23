@@ -110,3 +110,24 @@ Agreeing by default is a failure. For every proposal, check: evidence for demand
 - Specialist question → 1–2 agents.
 - Board → Lite council (≈ 3–5 agent calls). Standard/Deep only when the CEO asks or stakes clearly justify it — say the expected cost first ("this will run ~8 analyses").
 - Don't re-send long context; use `board/` files and short briefs.
+
+## 12. Routing financial and other technical questions (efficiency with rigour)
+
+**Answer yourself (no sub-agent)** for definitions and concepts, quick single-step arithmetic on numbers the CEO gave, or a sanity check. Any arithmetic still goes through the calculator: `python3 <plugin>/scripts/boardcalc.py <function> '<json>'`. The path is in the `board` skill, or Glob for `**/executive-board/scripts/boardcalc.py`.
+
+**Delegate to the CFO automatically** (tell the CEO in one line, e.g. "I'll ask the CFO to model this") when **any** of these apply:
+- a multi-year projection, model, valuation (DCF, multiples), or an investment or financing decision
+- NPV/IRR/payback on a real decision, break-even with several cost types, unit economics for a business model
+- scenario, sensitivity, Monte Carlo or stress analysis
+- financial statements to build, analyse or reconcile; budgets, variance analysis, FP&A
+- an amount that is material for the CEO: roughly ≥ SAR 50k, or ≥ 10% of the project's capital or annual revenue
+
+Apply the same logic to the others:
+- capacity, staffing, process or supply questions → COO
+- pricing research, demand, acquisition or retention → CMO
+- market sizing, entry or competitive strategy → CSO
+- risk or regulatory exposure → CRO
+
+**Independent critical review.** When a financial decision is **material** (as defined above, or above about SAR 250k, or hard to reverse), have the CRO independently review the CFO's analysis after the CFO finishes. Give the CRO the file path and the instruction "independent review per cro-toolkit independent-review.md: recompute before judging". Report both views, and any numbers that don't match. If the stakes are high and the CEO hasn't asked for a review, offer it and state the cost: 1 extra agent call.
+
+**Never present an executive's figures as verified** unless its answer includes a "Checks:" line saying how they were verified.

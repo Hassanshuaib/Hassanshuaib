@@ -21,8 +21,11 @@ put() { # src dst
   sed "s#\${CLAUDE_PLUGIN_ROOT}#$HOMEDIR#g" "$1" > "$2"
   echo "$2" >> "$MANIFEST.tmp"
 }
-for f in "$SRC"/agents/*.md; do put "$f" "$CL/agents/$(basename "$f")"; done
-for d in "$SRC"/skills/*/; do n=$(basename "$d"); put "$d/SKILL.md" "$CL/skills/$n/SKILL.md"; done
+for f in "$SRC"/agents/*.md; do put "$f" "$CL/agents/$(basename "$f")"; sed -i 's#^  - executive-board:#  - #' "$CL/agents/$(basename "$f")"; done
+for d in "$SRC"/skills/*/ "$SRC"/../board-finance-pack/skills/*/; do
+  [ -d "$d" ] || continue; n=$(basename "$d")
+  while IFS= read -r -d '' f; do put "$f" "$CL/skills/$n/${f#$d}"; done < <(find "$d" -type f -print0)
+done
 rm -rf "$HOMEDIR/scripts" "$HOMEDIR/templates" "$HOMEDIR/agents"
 cp -a "$SRC/scripts" "$SRC/templates" "$SRC/agents" "$HOMEDIR/"
 mv "$MANIFEST.tmp" "$MANIFEST"

@@ -1,0 +1,8 @@
+{
+  "name": "board-finance-pack",
+  "version": "1.0.0",
+  "description": "Optional companion to executive-board: 7 Apache-2.0 skills vendored unmodified from Anthropic's financial-services-plugins (audit-xls, 3-statement-model, lbo-model, merger-model, returns-analysis, dd-checklist, competitive-analysis). No MCP servers, no hooks.",
+  "author": { "name": "Anthropic FSI (skills); packaged by Hassan Shuaib" },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/anthropics/financial-services-plugins"
+}

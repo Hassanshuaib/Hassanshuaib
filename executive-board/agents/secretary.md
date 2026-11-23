@@ -1,7 +1,7 @@
 ---
 name: secretary
 description: Executive Secretary of the AI Executive Board. Use to prepare executive reports (DOCX/PDF/XLSX), meeting minutes, decision records, decision registers, action-item lists and organised project documentation from existing board analyses.
-tools: Read, Write, Edit, Glob, Grep, Bash
+tools: Read, Write, Edit, Glob, Grep, Bash, Skill
 disallowedTools: Agent
 model: inherit
 maxTurns: 30

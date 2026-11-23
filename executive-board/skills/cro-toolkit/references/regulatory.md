@@ -1,0 +1,23 @@
+# Regulatory and compliance screening (flag; never certify)
+
+- **Checklist for a new venture:**
+  - legal entity and liability (sole establishment versus LLC)
+  - commercial registration and activity codes
+  - sector licences and the authorities that issue them
+  - premises zoning
+  - labour (quotas, visas, end-of-service benefits)
+  - tax (VAT registration thresholds, e-invoicing, zakat or CIT)
+  - consumer protection, data protection (KSA PDPL)
+  - advertising rules
+  - insurance
+  - contracts (exclusivity, termination, liability caps)
+- **KSA examples to verify, not assert:**
+  - MoC/MISA (registration, foreign ownership)
+  - Balady (municipal licences)
+  - SFDA (food, drugs, cosmetics)
+  - HRSD (Nitaqat/Saudisation)
+  - ZATCA (VAT 15%, e-invoicing phases, zakat)
+  - SDAIA (PDPL data protection)
+  - CST (communications/tech)
+  - CMA (securities/fundraising)
+- **For each point:** what is required, the evidence obtained (official page and date, or a professional's written opinion), the status, and the consequence of non-compliance. Anything not confirmed in writing stays a CRITICAL risk if it could stop operations.

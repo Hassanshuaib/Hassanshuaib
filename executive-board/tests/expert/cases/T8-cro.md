@@ -1,0 +1,1 @@
+Ask the CRO for an independent critical review of the CFO's analysis in board/analyses/2026-11-20-cfo-expansion.md and of its spreadsheet board/analyses/expansion-model.xlsx. The CEO intends to approve the investment next week based on this analysis.

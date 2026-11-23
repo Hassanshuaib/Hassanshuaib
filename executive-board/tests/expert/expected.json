@@ -1,0 +1,210 @@
+{
+ "T1": [
+  {
+   "year": 1,
+   "revenue": 28320000.0,
+   "ebitda": 4531200.0,
+   "net_income": 2334720.0,
+   "cfo": 2401854.2465753425,
+   "cash": 1500000.0,
+   "revolver": 1230625.7534246575,
+   "debt": 5000000.0,
+   "equity": 9751040.0,
+   "balance": 0.0
+  },
+  {
+   "year": 2,
+   "revenue": 31718400.000000004,
+   "ebitda": 5074944.000000001,
+   "net_income": 2626516.339726028,
+   "cfo": 3407372.4493150683,
+   "cash": 1500000.0,
+   "revolver": 1700170.3890410967,
+   "debt": 4000000.0,
+   "equity": 11720927.254794521,
+   "balance": 0.0
+  },
+  {
+   "year": 3,
+   "revenue": 34255872.00000001,
+   "ebitda": 5480939.520000001,
+   "net_income": 2896550.080876713,
+   "cfo": 3902501.309369864,
+   "cash": 1500000.0,
+   "revolver": 1234600.1998904117,
+   "debt": 3000000.0,
+   "equity": 13893339.815452056,
+   "balance": 3.725290298461914e-09
+  }
+ ],
+ "T2": {
+  "beta_unlevered": 0.8870967741935485,
+  "beta_relevered": 1.0645161290322582,
+  "cost_of_equity": 0.11854838709677419,
+  "wacc": 0.10603870967741937,
+  "fcff": [
+   6044000.000000001,
+   6798400.0,
+   7510272.000000001,
+   8145688.320000003,
+   8652764.736000005
+  ],
+  "ev_gordon": 98055067.23046246,
+  "ev_exit": 115818662.13682124,
+  "per_share_gordon": 7.805506723046246,
+  "per_share_exit": 9.581866213682124,
+  "tv_share_gordon": 0.7221637847917672,
+  "tv_share_exit": 0.7647766926446019,
+  "implied_exit_multiple_gordon": 7.19507075310571,
+  "implied_g_exit": 0.04439954463339911,
+  "sensitivity_per_share": {
+   "wacc-1%_g2%": 8.137476900259495,
+   "wacc-1%_g3%": 9.331514511736703,
+   "wacc-1%_g4%": 10.951699555355216,
+   "wacc+0%_g2%": 6.921725112056849,
+   "wacc+0%_g3%": 7.805506723046246,
+   "wacc+0%_g4%": 8.95694396065416,
+   "wacc+1%_g2%": 5.9602487884450435,
+   "wacc+1%_g3%": 6.635239283378148,
+   "wacc+1%_g4%": 7.487768428768797
+  }
+ },
+ "T3": {
+  "A": {
+   "cashflows": [
+    -2400000.0,
+    380800.00000000023,
+    879476.8000000003,
+    958199.2528000001,
+    1043169.7877488004,
+    1134851.7823189653,
+    2036299.9022140761
+   ],
+   "npv": 1806829.8287735991,
+   "irr": [
+    0.29096743733433006
+   ],
+   "mirr": 0.21884064767050693,
+   "payback": 3.1740118908080484,
+   "disc_payback": 3.935006529873614,
+   "pi": 1.7528457619889997,
+   "eaa": 427092.2259156758
+  },
+  "B": {
+   "cashflows": [
+    -1100000.0,
+    380000,
+    400000,
+    420000,
+    380000
+   ],
+   "npv": 124409.46596146331,
+   "irr": [
+    0.16172003331665463
+   ],
+   "mirr": 0.14013552299793308,
+   "payback": 2.761904761904762,
+   "disc_payback": 3.5029938710526327,
+   "pi": 1.1130995145104212,
+   "eaa": 40100.449261327136
+  }
+ },
+ "T4": {
+  "base_npv": 1806829.8287735991,
+  "tornado": {
+   "units1": [
+    1193498.3289010697,
+    2420161.328646128
+   ],
+   "price1": [
+    1193498.3289010697,
+    2420161.328646128
+   ],
+   "vc": [
+    2680014.2839518604,
+    933645.373595336
+   ],
+   "fixed1": [
+    2041876.9019760946,
+    1571782.7555711034
+   ],
+   "capex": [
+    2012985.5259436932,
+    1600674.1316035055
+   ]
+  },
+  "breakeven_price": 67.01369344813264,
+  "price_headroom": -0.2945927005459722,
+  "breakeven_units": 28216.291978161113,
+  "units_headroom": -0.2945927005459722,
+  "combined_downside_npv": -745060.2554633925,
+  "mc_mean": 1552897.9784424456,
+  "mc_prob_negative": 0.047565,
+  "mc_p5": 21630.436918442494
+ },
+ "T5": {
+  "stations_12": null,
+  "stations_needed": 14,
+  "at_needed": {
+   "c": 14,
+   "util": 0.8571428571428571,
+   "p_wait": 0.4817053726149884,
+   "mean_wait_min": 0.9634107452299768,
+   "sl_3min": 0.8925170030640586
+  },
+  "safety_stock": 2261.299875788332,
+  "reorder_point": 8261.299875788332,
+  "eoq": 56920.997883030825,
+  "oee": 0.75
+ },
+ "T6": {
+  "rate_a": 0.04096153846153846,
+  "rate_b": 0.04607843137254902,
+  "relative_lift": 0.12491945134861471,
+  "z": 1.2729474973279928,
+  "p_value": 0.20303667313268647,
+  "n_per_arm": 38508,
+  "ltv": 933.6363636363636,
+  "ltv_cac": 3.0117302052785924,
+  "cac_payback_months": 6.0370009737098345,
+  "breakeven_immediate_loss": 0.1123595505617978,
+  "breakeven_churn": 0.05069620253164557
+ },
+ "T7": {
+  "tam_by_segment": {
+   "small": 82944000.0,
+   "medium": 72576000.0,
+   "large": 76032000.0
+  },
+  "tam": 231552000.0,
+  "sam": 81043200.0,
+  "som": 3241728.0,
+  "hhi": 1972,
+  "scores": {
+   "organic": 6.25,
+   "partnership": 6.95,
+   "acquire": 6.15
+  },
+  "winner": "partnership",
+  "rank_flips": []
+ },
+ "T8": {
+  "planted_errors": [
+   "E1 FCFE discounted at WACC (rate/cash-flow mismatch; should use cost of equity)",
+   "E2 terminal growth 8% with WACC 11% (unrealistic; TV dominates value)",
+   "E3 NWC omitted despite 45% growth",
+   "E4 arithmetic: stated NPV 80715753 vs 70187612 computed with their own inputs",
+   "E5 IRR presented as decisive although cash flows change sign 3 times (refit in Y3) / IRR unverified",
+   "E6 45%%/yr growth for 5 years without evidence",
+   "E7 tax 0%% unjustified (zakat/CIT)",
+   "X1 xlsx: NPV formula discounts t0 (=NPV(0.11,B9:G9))",
+   "X2 xlsx: SUM(C4:F4) omits Y5 revenue",
+   "X3 xlsx: G5 EBITDA hard-coded 3,300,000 instead of formula (3,315,469)"
+  ],
+  "npv_their_inputs": 70187611.52191879,
+  "npv_stated": 80715753.2502066,
+  "their_cashflows_irrs": [
+   0.9547004162853654
+  ]
+ }
+}

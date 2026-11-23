@@ -1,7 +1,16 @@
 {
   "name": "executive-board",
-  "version": "1.0.0",
-  "description": "Adaptive AI Executive Board: a Chief of Staff orchestrating CFO, COO, CMO, CSO, CRO (devil's advocate) and an Executive Secretary, with a tiered board-council deliberation and per-project decision memory.",
-  "author": { "name": "Hassan Shuaib" },
-  "keywords": ["executive", "board", "cfo", "strategy", "decision", "council"]
+  "version": "1.1.0",
+  "description": "Adaptive AI Executive Board: a Chief of Staff orchestrating CFO, COO, CMO, CSO, CRO (devil's advocate) and an Executive Secretary, with a tiered board-council deliberation and per-project decision memory, per-executive expert toolkits and a verified calculation engine.",
+  "author": {
+    "name": "Hassan Shuaib"
+  },
+  "keywords": [
+    "executive",
+    "board",
+    "cfo",
+    "strategy",
+    "decision",
+    "council"
+  ]
 }

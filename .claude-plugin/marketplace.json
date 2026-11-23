@@ -1,12 +1,19 @@
 {
   "name": "hassan-board",
-  "owner": { "name": "Hassan Shuaib" },
+  "owner": {
+    "name": "Hassan Shuaib"
+  },
   "description": "Personal marketplace hosting the AI Executive Board plugin.",
   "plugins": [
     {
       "name": "executive-board",
       "source": "./executive-board",
       "description": "Adaptive AI Executive Board: Chief of Staff, CFO, COO, CMO, CSO, CRO, Executive Secretary, board council and decision memory."
+    },
+    {
+      "name": "board-finance-pack",
+      "source": "./board-finance-pack",
+      "description": "Optional: 7 Anthropic Apache-2.0 finance skills (model audit, 3-statement, LBO, merger model, PE returns, due diligence, competitive analysis) for the executive board."
     }
   ]
 }
