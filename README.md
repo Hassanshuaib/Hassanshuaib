@@ -159,3 +159,15 @@ cd apps/dashboard && npm install && cp .env.example .env  # ثم عدّل .env
 npm run dev
 npm run build
 ```
+
+---
+
+## المجلس التنفيذي الذكي (AI Executive Board)
+
+هذا المستودع يحتوي أيضاً على إضافة Claude Code مستقلة عن مشروع كومبير: [`executive-board/`](./executive-board/README.md).
+للتثبيت داخل Claude Code:
+
+```
+/plugin marketplace add hassanshuaib/hassanshuaib
+/plugin install executive-board@hassan-board
+```

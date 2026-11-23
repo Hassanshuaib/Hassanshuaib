@@ -1,0 +1,167 @@
+session: 1b57e91a-ee09-4b3b-bf50-4430d30d7917
+TOOL CALLS:
+  MAIN Skill: executive-board:board-council
+  MAIN Edit: <test-projects>/najm-cafe/board
+  MAIN Write: <test-projects>/najm-cafe/board
+  MAIN Agent: executive-board:cfo
+    sub>Bash: find board -type f | sort && cat board/minutes/2026-11-23-investment-council-frame.md board/context.md board/a
+  MAIN Agent: executive-board:coo
+    sub>Bash: cat board/analyses/2026-11-23-cfo-investment-300k.md board/analyses/2026-11-23-coo-ops-challenge.md; ls board/
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>Bash: cat <test-projects>/najm-cafe/b
+  MAIN Agent: executive-board:cmo
+    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+  MAIN Agent: executive-board:cso
+    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>WebSearch: 
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>WebSearch: 
+  MAIN Agent: executive-board:cro
+    sub>WebSearch: 
+    sub>Bash: ls -R board && cat board/minutes/2026-11-23-investment-council-frame.md board/context.md board/assumptions.md
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>Bash: cat board/analyses/2026-11-23-cfo-investment-300k.md board/analyses/2026-11-23-coo-ops-challenge.md; cat board
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>Read: /root/.claude/projects/-tmp-claude-0--home-user-Hassanshuaib-bd082b9f-f94c-55be-aec6-31c34e16556c-scratchpad-p
+    sub>WebFetch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebFetch: 
+    sub>WebSearch: 
+    sub>WebFetch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebFetch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebSearch: 
+    sub>WebFetch: 
+    sub>WebFetch: 
+    sub>Bash: mkdir -p <test-projects>/najm-c
+    sub>Bash: mkdir -p <test-projects>/najm-c
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Bash: python3 <test-projects>/najm-ca
+    sub>Bash: mkdir -p <test-projects>/najm-c
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Bash: python3 <test-projects>/najm-ca
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Bash: python3 <test-projects>/najm-ca
+    sub>Bash: mkdir -p <test-projects>/najm-c
+    sub>Bash: cd <test-projects>/najm-cafe/bo
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Write: <test-projects>/najm-cafe/board
+    sub>Write: <test-projects>/najm-cafe/board
+  MAIN Write: <test-projects>/najm-cafe/board
+  MAIN Agent: executive-board:cro
+    sub>Read: <test-projects>/najm-cafe/board
+    sub>Read: <test-projects>/najm-cafe/board
+  MAIN Agent: executive-board:cfo
+    sub>Read: <test-projects>/najm-cafe/board
+    sub>Read: <test-projects>/najm-cafe/board
+  MAIN Read: <test-projects>/najm-cafe/board
+  MAIN Edit: <test-projects>/najm-cafe/board
+  MAIN Bash: ls -R <test-projects>/najm-cafe
+  MAIN Read: <test-projects>/najm-cafe/board
+  MAIN Read: <test-projects>/najm-cafe/board
+  MAIN Read: <test-projects>/najm-cafe/board
+  MAIN Write: <test-projects>/najm-cafe/board
+  MAIN Write: <test-projects>/najm-cafe/board
+  MAIN Edit: <test-projects>/najm-cafe/board
+  MAIN Edit: <test-projects>/najm-cafe/board
+cost_usd: 7.601936800000001 turns: 9 dur_s: 92
+=== RESULT ===
+## قرار المجلس: استثمار 300 ألف ريال
+
+**الخلاصة:** المجلس يرفض بناء مطبخ في الحي السكني بالـ 300 ألف كما هو مقترح. ويوافق فقط على **دفعة تجريبية بنحو 35 ألف ريال**، بلا عقد إيجار وبلا توظيف، مدتها 8 إلى 10 أسابيع وتنتهي قبل رمضان (≈ 7 فبراير 2027). ويبقى ≈ 265 ألف محجوزة حتى تتحقق شروط الانتقال.
+
+**المستوى:** Standard. خمسة تحليلات مستقلة من المدير المالي ومدير العمليات ومدير التسويق ومدير الاستراتيجية ومدير المخاطر. ثم جولة مراجعة واحدة بأسماء مخفية، قام بها مدير المخاطر والمدير المالي.
+
+### أين اتفق المجلس
+- الأعضاء الخمسة رفضوا استثمار المبلغ كاملاً الآن.
+- الأرقام كلها تقديرات لم يُختبر منها شيء.
+- الربح في السيناريو الأساسي يأتي أساساً من **عملك أنت بلا راتب**. إذا احتجت من السنة الثانية راتباً يتجاوز ≈ 15 إلى 16 ألف ريال شهرياً، يصبح المشروع خاسراً (NPV أقل من صفر).
+- ترخيص المطبخ المركزي هو أخطر نقطة. حسب ما نشرته الصحف، لوائح 2025 تشترط مساحة 100 م² على الأقل، ومختصاً معتمداً في سلامة الغذاء، وموقعاً مسموحاً له بهذا النشاط. هذا لم يتأكد بعد، ويحتاج رأياً من مختص مرخّص.
+
+### أين اختلفوا، وكيف حسمته
+
+| الموضوع | المواقف | الحسم |
+|---|---|---|
+| حجم الدفعة التجريبية | 30 ألف (التسويق، الاستراتيجية)، 35 (المخاطر)، 45 (المالي) | **≈ 35 ألف**: تقدير مدير العمليات مفصّل بنداً بنداً، وتقدير 45 ألف لم يُشرح |
+| طريقة التسعير | سعر لكل موظف (المالي) أو سعر لكل كوب على شكل باقات 10 إلى 12.5 ريال للكوب (التسويق) | **تختبر التجربة الطريقتين** |
+| المنتج في التجربة | قهوة جاهزة (المالي، التسويق)، أو وصفتك تُصنع عند منتج مرخّص (العمليات)، أو آلات قهوة في المكاتب (الاستراتيجية) | **وصفتك عند منتج مرخّص**، مع خيار صغير للقهوة الساخنة أو الحبوب دون شراء آلات |
+| متى تبني مطبخك | ≈ 25 مكتباً (الاستراتيجية، المخاطر) أو ≈ 40 مكتباً (المالي) | **≈ 25 مكتباً**، وفي موقع تجاري قرب منطقة مكاتب، لا في حي سكني |
+
+### أخطاء وافتراضات ضعيفة كشفها المجلس
+- **الاحتياطي ليس حماية حقيقية.** الدفعة الثانية لا تشمل رأس مال عامل، فلا يبقى في الشهر السادس إلا ≈ 67 ألف من الـ 125 ألف المحجوزة. **الحماية الحقيقية الوحيدة هي شرط اجتياز التجربة.** وقد أجمع المراجعان على أن هذا أقوى ما قيل في المجلس، وهو من مدير المخاطر.
+- **سعر 230 ريال لكل موظف يعادل 19 إلى 26 ريال لكل كوب يُشرب فعلاً**، لأن بعض الموظفين لا يشربون. هذا سعر مقهى، والمكاتب ستقلّص العدد أو تلغي الاشتراك.
+- **الحي السكني يحدّ حجم السوق.** هدف السنة الثالثة يعني الاستحواذ على 48% إلى 70% من السوق المتاح قرب حي سكني، وهذا غير واقعي. قرب منطقة مكاتب تصبح النسبة 14% إلى 21%.
+- **أمور لم ينتبه لها أي عضو:** نسب السعودة (نطاقات)، وترخيص سيارة التوصيل، ومن يملك الثلاجات في المكاتب، وهل سعر 230 شامل ضريبة القيمة المضافة أم لا.
+
+### المخاطر
+
+| الدرجة | الخطر |
+|---|---|
+| **حرج** | الترخيص أو تصنيف الموقع لا يسمح بالنشاط |
+| **حرج** | الطلب والسعر غير مثبتين |
+| **حرج** | أنت نقطة الضعف الوحيدة، وتصل إلى ≈ 50 ساعة أسبوعياً عند ≈ 14 مكتباً |
+| **حرج** | حادثة سلامة غذاء في الـ cold brew |
+| مهم | مسؤولية شخصية إن كان المشروع مؤسسة فردية بدل شركة ذات مسؤولية محدودة |
+| مهم | تراجع الطلب في الشتاء ورمضان |
+| للمتابعة | ضريبة القيمة المضافة والفوترة الإلكترونية والزكاة |
+
+### التوصية: نفّذ الدفعة التجريبية فقط
+
+**شروط الانتقال للدفعة الثانية (كلها مطلوبة):**
+1. 5 مكاتب على الأقل باشتراك مدفوع مقدماً لمدة 3 أشهر، تغطي 120 موظفاً أو أكثر (أو 1,500 كوب شهرياً). السعر 220 ريال للموظف أو 10 ريال للكوب على الأقل، قبل الضريبة. ونصف هذه المكاتب على الأقل من خارج معارفك.
+2. المكاتب التجريبية تدفع 80% من السعر الكامل على الأقل.
+3. مسار ترخيص مكتوب من مختص مرخّص، وموقع قابل للترخيص بعقد يسمح بالخروج المبكر.
+4. مؤشرات التشغيل: 30 دقيقة أو أقل لكل توصيلة، وهدر 10% أو أقل، و98% من التوصيلات بحرارة 5°م أو أقل، و50 ساعة عمل لك أسبوعياً أو أقل.
+5. أن تؤكد أن عندك ما يكفي لمعيشتك 24 شهراً على الأقل من خارج الـ 300 ألف.
+6. أن تتضمن ميزانية الدفعة الثانية رأس مال عامل.
+
+**متى نوقف المشروع أو نغيّر النموذج:**
+- إذا تحوّل أقل من 3 مكاتب إلى اشتراك مدفوع، أو لم يوجد مسار ترخيص، أو كان السعر أقل من 200 ريال للموظف: نتوقف، أو نتحول إلى بيع الحبوب مع آلة تحضير للمكاتب.
+
+### درجة الثقة
+**متوسطة** في هيكل القرار، و**منخفضة** في الأرقام. يتغير القرار إذا جاءت اشتراكات مدفوعة حقيقية، أو عرض سعر حقيقي من منتج الـ cold brew، أو رأي نظامي في الترخيص.
+
+### أول خطوة، وهي شبه مجانية
+خلال أسبوعين:
+- تطلب **رأياً مكتوباً من مختص في الترخيص**.
+- تجري **≈ 20 مقابلة** مع أصحاب قرار الشراء في مكاتب.
+- تجمع **عروض أسعار** من منتجَي cold brew لوصفتك.
+
+كل هذا قبل صرف أي ريال من الدفعة التجريبية.
+
+_كل الأعضاء نموذج واحد بأدوار وتعليمات مختلفة. المجلس يعطيك زوايا نظر مستقلة، وليس آراء نماذج مستقلة. هذا تحليل ذكاء اصطناعي، فتحقق من الحقائق المهمة، وراجع مختصاً في الترخيص والضريبة والزكاة._
+
+---
+
+**ما سجّلته في ملفات المشروع** (في `<test-projects>/najm-cafe/board/`):
+- محضر الاجتماع: `minutes/2026-11-23-investment-council.md`
+- القرار بحالة **مقترح**: `decisions/DEC-001-staged-investment-tranche0.md`، وأضفته إلى `decisions/register.md`
+- 6 مهام أولى: `actions.md`
+- افتراضات المجلس الجديدة (A26 إلى A38): `assumptions.md`
+- التحليلات الخمسة الكاملة: `analyses/2026-11-23-council-*.md`
+
+**ما أحتاجه منك:**
+1. هل تعتمد القرار DEC-001 كما هو، أم تريد تعديله أو رفضه؟ لن أغيّر حالته إلى "معتمد" إلا بكلمتك.
+2. ما زالت أربعة أسئلة مفتوحة: هل ستتفرغ للمشروع تفرغاً كاملاً؟ وما الحي بالتحديد؟ وما الراتب الذي ستحتاجه من السنة الثانية؟ وهل عندك علاقات مباشرة بشركات؟
+3. هل تريد أن تجهّز السكرتيرة تقرير DOCX أو PDF بالقرار لتشاركه مع أحد؟

@@ -1,0 +1,12 @@
+{
+  "name": "hassan-board",
+  "owner": { "name": "Hassan Shuaib" },
+  "description": "Personal marketplace hosting the AI Executive Board plugin.",
+  "plugins": [
+    {
+      "name": "executive-board",
+      "source": "./executive-board",
+      "description": "Adaptive AI Executive Board: Chief of Staff, CFO, COO, CMO, CSO, CRO, Executive Secretary, board council and decision memory."
+    }
+  ]
+}

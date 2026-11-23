@@ -1,0 +1,30 @@
+session: d4ef2768-d113-4df7-b2b5-8309e2524df8
+TOOL CALLS:
+  MAIN Bash: pwd && ls -la && ls -R board 2>/dev/null | head -50
+cost_usd: 0.1867298 turns: 2 dur_s: 17
+=== RESULT ===
+**The executives I can consult now.** All six are installed as the `executive-board` plugin and available to me:
+
+| Role | Agent | Use for |
+|---|---|---|
+| CFO | `executive-board:cfo` | Valuation, NPV/IRR, budgets, unit economics, funding |
+| COO | `executive-board:coo` | Operations, capacity, staffing, supply chain, KPIs |
+| CMO | `executive-board:cmo` | Customers, pricing, positioning, CAC/LTV |
+| CSO | `executive-board:cso` | Strategy, market entry, business model, competition |
+| CRO | `executive-board:cro` | Devil's advocate, pre-mortem, risk |
+| Secretary | `executive-board:secretary` | Minutes, decision records, DOCX/PDF/XLSX reports |
+
+They all run on the same underlying model, each with different instructions. Think of them as separate lenses, not separate minds. I haven't called any of them in this conversation yet.
+
+**What I know about your earlier projects, the Najm cafe or past investment decisions: nothing.**
+- I don't keep memory between sessions. The only memory is each project's `board/` folder.
+- I checked the current project folder (`<test-projects>/other-co`). It's empty: no `board/` folder, no files.
+- So I have no records here about the Najm cafe or any investment decision. I won't guess or make anything up about them.
+- I don't read other projects' `board/` folders unless you explicitly ask, so one company's information doesn't leak into another.
+
+**What you can do:**
+1. **If the Najm cafe work is in another project folder:** open the session in that folder, or give me its path and explicitly allow me to read it.
+2. **If it was never saved:** give me a short summary (the decision, the numbers, the outcome) and I'll start from there.
+3. **For new work in this project:** shall I create a `board/` folder here to keep decisions and minutes?
+
+What would you like to do?
