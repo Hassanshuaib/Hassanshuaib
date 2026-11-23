@@ -1,0 +1,63 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cso
+== executive-board:cso
+    Bash boardcalc:decision_matrix,hhi,market_sizing
+    Bash C=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash boardcalc:decision_matrix,hhi,market_sizing
+    Bash boardcalc:list
+    Grep
+    Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
+    Write board/analyses/calc/2026-11-23-cso-office-coffee.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Write board/analyses/2026-11-23-cso-office-coffee.md
+COST_USD 0.67
+=== FINAL ===
+The CSO recommends entering through the co-working partnership, starting with a small, low-capital pilot. The obtainable market (SOM) is only about SAR 3.2M a year, which doesn't justify the capital an acquisition would need. I asked the CSO only; the data is your fictional data. I also recomputed the totals, the HHI and the scores myself and they match.
+
+**(a) Market size** (SAR per year; each employee is worth 0.60 × 16 × 12 × 10 = SAR 1,152)
+
+| Segment | Employees | TAM |
+|---|---|---|
+| Small | 72,000 | 82,944,000 (35.8%) |
+| Medium | 63,000 | 72,576,000 (31.3%) |
+| Large | 66,000 | 76,032,000 (32.8%) |
+| **Total** | **201,000** | **231,552,000** |
+
+- **SAM** (35% of TAM): **SAR 81,043,200**
+- **SOM** (4% of SAM): **SAR 3,241,728**, which is 1.4% of TAM
+
+**(b) Concentration**
+- The HHI is **1,972**, and the four largest firms hold 80% of the market.
+- **The band depends on which guidelines you use:**
+  - Under the 2010 guidelines it is **moderately concentrated** (1,500–2,500).
+  - Under the 2023 guidelines it is **highly concentrated** (above 1,800).
+- Buying a 1% firm would barely move the HHI, so antitrust isn't a concern.
+
+**(c) Entry options**
+
+| Rank | Option | Score |
+|---|---|---|
+| 1 | **Partnership** | **6.95** |
+| 2 | Organic | 6.25 |
+| 3 | Acquire | 6.15 |
+
+- **The ranking is robust.** The partnership stays first in all 8 cases where one weight moves ±20%.
+- **The narrowest lead is 0.56,** when the speed weight drops by 20%.
+- **For acquisition to win,** the value weight would have to go above about 0.54, roughly double its current level.
+
+**The CSO's recommendation**
+- **Who to target:** small and medium offices through co-working hubs. Together they are 67% of TAM.
+- **Large offices:** leave them to the leaders until we have references.
+- **Exclusivity:** the partnership is only an advantage if the access is exclusive and lasts several years. Otherwise anyone can copy it.
+- **Two checkpoints:**
+  - **At 6 months:** consumption of at least 12 cups per employee per month, a realised price of at least SAR 8, and exclusivity of at least 24 months.
+  - **At 18 months:** revenue running at SAR 1M a year or more, and each site making money after its direct costs.
+- **Confidence:** Medium. The ranking is solid, but the market size depends entirely on the inputs.
+
+**My view (Chief of Staff):** the weakest assumption is **SAR 10 per cup**. That looks like a café price; office coffee contracts are usually cheaper. At SAR 5 per cup the SOM halves to about SAR 1.6M (my own calculation). And the scores don't include profit margin or cost to serve, so "the partnership wins" means it is the best way in, not that the market is attractive. Before deciding, we need the partner's terms, gross margin per cup, and real price quotes.
+
+**Next step:** should I ask the CFO to work out the pilot's unit economics (margin, break-even and capital needed)? That would be one extra agent call.
+
+Files are in <test-projects>/x-T7-cso/board/analyses:
+- 2026-11-23-cso-office-coffee.md
+- calc/2026-11-23-cso-office-coffee.py

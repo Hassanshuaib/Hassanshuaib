@@ -1,0 +1,13 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cfo
+== executive-board:cfo
+    Bash boardcalc:doc
+    Bash boardcalc:doc
+    Bash boardcalc:doc
+    Read skills/cfo-toolkit/references/capital-budgeting.md
+    Bash boardcalc:list,project
+    Bash cd /tmp; python3 -c " import sys,inspect; sys.path.insert(0,'/home/use
+    Bash python3 -c " import sys,inspect; sys.path.insert(0,'/home/user/Hassans
+    Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
+    Write board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-

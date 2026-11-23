@@ -1,0 +1,59 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cfo
+== executive-board:cfo
+    Bash cd /home/user/Hassanshuaib/executive-board/scripts && for f in unlever
+    Bash boardcalc:capm,dcf,relever_beta,unlever_beta,wacc
+    Bash sed -n '1,400p' /home/user/Hassanshuaib/executive-board/scripts/boardc
+    Grep
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Bash mkdir -p /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6
+    Write board/analyses/calc/2026-11-23-cfo-najd-dcf.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Write board/analyses/2026-11-23-cfo-najd-dcf.md
+COST_USD 0.71
+=== FINAL ===
+## Najd Logistics DCF (fictional company, SAR)
+
+**Bottom line:** The CFO values Najd Logistics at **SAR 7.81 per share** using Gordon growth and **SAR 9.58** using the 9.0x exit multiple. The CFO prefers 7.81 as the anchor, because a 9.0x multiple only holds if the business grows 4.44% a year forever.
+
+**Consulted:** the CFO (`executive-board:cfo`). The CFO checked the figures with its calculator and its own model and reports 11 of 11 checks passed. I also recomputed the beta, WACC, Y1 FCFF and Gordon terminal value by hand, and they match.
+
+**Cost of capital**
+- Unlevered beta 0.8871, relevered beta 1.0645
+- Cost of equity: 5.0% + 1.0645 × 5.5% + 1.0% = **11.855%**
+- After-tax cost of debt 5.6%, weights 80% equity / 20% debt
+- **WACC 10.604%**
+
+**FCFF (SAR m):** Y1 6.044 · Y2 6.798 · Y3 7.510 · Y4 8.146 · Y5 8.653. Together they are worth 27.24 today. Y5 EBITDA is 16.29.
+
+| Method | TV | EV | Equity | Per share | TV as % of EV | Implied figure |
+|---|---|---|---|---|---|---|
+| Gordon, g 3% | 117.21 | 98.06 | 78.06 | **7.81** | 72.2% | implied exit multiple 7.20x |
+| Exit, 9.0x | 146.61 | 115.82 | 95.82 | **9.58** | 76.5% | implied growth 4.44% |
+
+**Sensitivity, Gordon method (SAR per share)**
+| WACC \ g | 2% | 3% | 4% |
+|---|---|---|---|
+| 9.60% | 8.14 | 9.33 | 10.95 |
+| 10.60% | 6.92 | 7.81 | 8.96 |
+| 11.60% | 5.96 | 6.64 | 7.49 |
+
+**Reconciling the two methods**
+- **Size of the gap:** the exit case gives an EV 18.1% higher than Gordon. At equity level the gap widens to 22.8%, because the SAR 20m of net debt is subtracted from both.
+- **Why the exit case is harder to defend:** 4.44% growth forever would need a return on new investment of about 23.6% indefinitely, which is unrealistic for an asset-heavy logistics business. At 3% growth the required return is about 15.9%.
+- **What closes the gap:** either an exit multiple of 7.2x, or Gordon growth of 4.44%. Cutting WACC by 1 point at 3% growth also gets close (9.33).
+
+**Biggest risk:** the terminal value is 72–77% of EV, so the valuation rests mostly on the terminal assumption, not the five-year forecast.
+
+**Assumptions the CFO added:**
+- Net debt is at market value, with no other debt-like items.
+- Tax is a flat 20% on EBIT. Zakat versus corporate income tax in Saudi Arabia needs a tax adviser.
+- Year 6 reinvestment is carried at Year 5's rate, which makes the Gordon value slightly conservative.
+
+**Confidence:** high on the arithmetic, low on the absolute value, because all the inputs are illustrative.
+
+Files are in `<test-projects>/x-T2-dcf/board/analyses/`:
+- Full analysis: `2026-11-23-cfo-najd-dcf.md`
+- Model script: `calc/2026-11-23-cfo-najd-dcf.py`
+
+**Next step:** if this valuation will be used for a real decision, I can have the CRO review it independently for one extra agent call. I can also have the Secretary turn it into an Excel or Word report.

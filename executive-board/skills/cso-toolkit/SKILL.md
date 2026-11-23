@@ -5,7 +5,7 @@ description: CSO toolkit: strategy frameworks, bottom-up market sizing, market e
 
 # CSO Toolkit (index — read only what you need)
 
-**Calculator:** `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/boardcalc.py" <function> '<json>'`. Run `list` for all functions, or add `--doc` for one. In a manual install, use `~/.claude/executive-board/scripts/boardcalc.py`. References are in `${CLAUDE_PLUGIN_ROOT}/skills/cso-toolkit/references/`.
+**Calculator:** `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/boardcalc.py" <function> '<json>'`. Run `list` to see the functions, and `doc <fn> [<fn>...]` for parameters. **Do not read boardcalc.py's source**: it is large and costs tokens. In a manual install, use `~/.claude/executive-board/scripts/boardcalc.py`. References are in `${CLAUDE_PLUGIN_ROOT}/skills/cso-toolkit/references/`.
 
 | Task | Read | boardcalc functions | Optional skills |
 |---|---|---|---|

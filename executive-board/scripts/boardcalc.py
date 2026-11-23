@@ -7,7 +7,8 @@ deterministic (Monte Carlo takes a seed) and returns plain dicts/lists, so
 results can be pasted into analyses and re-run by anyone.
 
 CLI usage:
-    python3 boardcalc.py list                      # list functions with docs
+    python3 boardcalc.py list                      # list functions
+    python3 boardcalc.py doc npv irr               # full docs of named functions
     python3 boardcalc.py <function> '<json kwargs>'
     python3 boardcalc.py <function> @inputs.json  # kwargs read from a file
     python3 boardcalc.py npv '{"rate":0.1,"cashflows":[-100,30,40,50,20]}'
@@ -1224,6 +1225,10 @@ def main(argv):
         for k in sorted(PUBLIC):
             doc = (PUBLIC[k].__doc__ or "").strip().split("\n")[0]
             print("%-26s %s" % (k, doc))
+        return 0
+    if argv[1] == "doc":
+        for name in argv[2:]:
+            print("## %s\n%s\n" % (name, (PUBLIC[name].__doc__ or "").strip()) if name in PUBLIC else "unknown %s" % name)
         return 0
     fn = PUBLIC.get(argv[1])
     if not fn:

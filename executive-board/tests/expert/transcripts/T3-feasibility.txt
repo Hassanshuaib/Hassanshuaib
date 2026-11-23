@@ -1,0 +1,75 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cfo
+== executive-board:cfo
+    Bash boardcalc:compare_projects,eaa,list,mirr,payback,project
+    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash boardcalc:list
+    Bash boardcalc:list
+    Grep
+    Glob
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Write board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash boardcalc:compare_projects,irr
+    Edit board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Edit board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Edit board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Write board/analyses/2026-11-23-cfo-project-a-vs-b.md
+    Bash boardcalc:eaa
+    Edit board/analyses/2026-11-23-cfo-project-a-vs-b.md
+    Edit board/analyses/calc/2026-11-23-cfo-project-a-vs-b.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+COST_USD 0.94
+=== FINAL ===
+**Bottom line:** Choose Project A. It beats B on every value measure, and no realistic scenario we tested reverses that. The only measure where B comes out ahead is payback, by about 0.4 years.
+
+**Consulted:** the CFO. Its figures were checked against the board calculator, and the cash flows reconcile.
+
+**Project A cash flows (SAR; each year's working capital is invested in that year)**
+
+| t | Revenue | EBIT | Tax | NOPAT | Change in working capital | Other | **FCF** |
+|---|---|---|---|---|---|---|---|
+| 0 | | | | | | Capex (2,400,000) | **(2,400,000)** |
+| 1 | 3,800,000 | 546,000 | (109,200) | 436,800 | (456,000) | | **380,800** |
+| 2 | 4,069,800 | 639,816 | (127,963) | 511,853 | (32,376) | | **879,477** |
+| 3 | 4,358,756 | 741,092 | (148,218) | 592,874 | (34,675) | | **958,199** |
+| 4 | 4,668,227 | 850,383 | (170,077) | 680,306 | (37,137) | | **1,043,170** |
+| 5 | 4,999,672 | 968,281 | (193,656) | 774,625 | (39,773) | | **1,134,852** |
+| 6 | 5,354,648 | 1,095,424 | (219,085) | 876,339 | (42,597) | After-tax salvage 160,000 + working capital recovered 642,558 | **2,036,300** |
+
+FCF = NOPAT + depreciation of 400,000 a year − the increase in working capital, plus the year-6 items. EBIT is always positive, so the rule that losses can offset other profits never applies.
+
+**Metrics at 11%**
+
+| | A | B |
+|---|---|---|
+| NPV | **1,806,830** | 124,409 |
+| IRR | **29.10%** | 16.17% |
+| MIRR | **21.88%** | 14.01% |
+| Payback / discounted payback (years) | 3.17 / 3.94 | **2.76 / 3.50** |
+| PI | **1.753** | 1.113 |
+| EAA (value per year) | **427,092** | 40,100 |
+| NPV over a 12-year repeat cycle | **2,772,835** | 260,346 |
+
+**Why A wins**
+1. **NPV and IRR agree.** Normally the bigger project wins on NPV while the smaller one wins on IRR, and NPV should decide. That doesn't happen here. A's extra 1.3M of capex over B earns about 34%, well above the 11% hurdle, and adds about 1.68M of value.
+2. **The different lives don't change the answer.** The projects are mutually exclusive, last 6 and 4 years, and can be repeated. So the right comparison is EAA, or NPV over a 12-year repeat cycle. On both, A delivers about ten times B's value per year, and the two methods agree.
+3. **A also wins if capital is limited:** its PI of 1.75 means it creates more value per riyal invested.
+4. **Payback measures speed, not value.** B is ahead only because it is smaller and A has a large working-capital build in year 1. Payback matters only if cash is tight in the next 3–4 years.
+
+**Sensitivities**
+- **Working-capital timing:** if the year-1 working capital is invested at t0 instead, A's NPV falls to 1.748M. A still wins.
+- **Discount rate:** the ranking flips only at about 35.9%.
+- **Downside case** (price −5%, variable cost 60%, volume −10%): A's NPV is 660K, still well above B.
+- **Break-even, one driver at a time:** A falls to B's level only if the year-1 price drops to 69.6 (−27%) or variable cost rises to 68.9% of revenue. If the downside volume and cost happen together, the break-even price is about 81.
+
+**Biggest risk:** the price of 95 and the 58% variable cost. A's value depends almost entirely on them, and they are your inputs, not yet checked against quotes or contracts. The other open point is that B's cash flows were taken as complete, including its own working capital and salvage, which needs confirming.
+
+**Recommendation:** Choose A. Confidence is High that A beats B, and Medium on the size of the NPV. The decision would change if the confirmed price came in below about 81 or variable cost above about 65%. You would also need funding for a peak of about 2.4–2.9M.
+
+**Decision for you:** A commits 2.4M and is hard to reverse, so an independent CRO recalculation and challenge would be worth it. That is one more agent call. Should I run it, or record A as the proposed decision now?
+
+Files are in `<test-projects>/x-T3-feasibility/board/analyses/`:
+- `2026-11-23-cfo-project-a-vs-b.md`: the full analysis
+- `calc/2026-11-23-cfo-project-a-vs-b.py`: the calculation script

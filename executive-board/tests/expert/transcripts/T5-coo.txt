@@ -1,0 +1,57 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:coo
+== executive-board:coo
+    Bash cd /home/user/Hassanshuaib/executive-board/scripts; for f in erlang_c 
+    Bash boardcalc:eoq,erlang_c,oee,safety_stock,staff_for_service_level
+    Bash boardcalc:list
+    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash boardcalc:eoq,erlang_c,oee,safety_stock,staff_for_service_level
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Grep
+    Bash boardcalc:_clean,capacity,eoq,erlang_c,oee,safety_stock,staff_for_service_level
+    Write board/analyses/calc/2026-11-23-coo-cloud-kitchen-ops.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Write board/analyses/2026-11-23-coo-cloud-kitchen-ops.md
+    Edit board/analyses/2026-11-23-coo-cloud-kitchen-ops.md
+    Edit board/analyses/2026-11-23-coo-cloud-kitchen-ops.md
+COST_USD 0.74
+=== FINAL ===
+I asked the COO, and its answer is: **don't install 12 stations. Install 14 and keep a 15th ready to switch on.** Every number below comes from your fictional inputs. I also checked the main results by hand and they match.
+
+**(a) Packing stations** (180 orders/hr, 15 per station)
+
+| Stations | Utilisation | P(wait) | Avg wait | Orders starting within 3 min |
+|---|---|---|---|---|
+| 12 | 100% | — | grows without limit | 0%, the queue never clears |
+| 13 | 92.3% | 70.4% | 2.82 min | 66.7%, fails |
+| **14** | **85.7%** | **48.2%** | **0.96 min** | **89.3%, the fewest that pass** |
+| 15 | 80.0% | 31.9% | 0.43 min | 96.6% |
+
+At 12 stations, capacity exactly equals demand, so any random swing creates a backlog that lasts the whole peak.
+
+**(b) Cups** (service level 95%, z = 1.645)
+- **Safety stock:** 2,261 cups. About 76% of it is there because the supplier's lead time varies, not because demand varies.
+- **Reorder point:** 8,261 cups, about 6.9 days of stock.
+- **Order size (EOQ):** about 56,900 cups. That is 7.6 orders a year, one every 47 days.
+- **Annual cost:** about SAR 6,831, split equally between ordering and holding.
+
+**(c) Oven**
+- **OEE:** 75.0%, from availability 90.0%, performance 88.0% and quality 94.7%.
+- **Biggest loss:** the oven runs slower than its ideal speed, which costs about 65 minutes. Downtime costs 60 minutes and the 50 rejected units cost about 25.
+
+**Where 14 stations could fail:** 14 has very little margin.
+- If orders arrive 10% faster, or packing is 10% slower, you need 15.
+- If both happen, you need 17.
+- If one packer is absent, you drop to 13, which fails the target.
+- The model may overstate waits because real packing times are fairly steady. It may understate them because delivery-app orders arrive in bursts.
+
+**What I recommend:**
+1. **Packing:** run 14 stations at the peak, keep a 15th on standby and cross-train staff to cover it. Before you buy any equipment, measure real order arrivals and packing times in 15-minute slots for two weeks.
+2. **Cups:** reorder at 8,261 and order about 57,000 at a time, rounded to the supplier's pack size. Negotiate a more reliable delivery time with the supplier. Halving how much it varies would cut the safety stock by about 35%.
+3. **Oven:** fix the slow running first, then downtime and rejects. Aim for 80% OEE within 90 days.
+
+Confidence: medium-high. Measured arrival and packing data could raise the number of stations needed to 15 or more.
+
+**Decision for you:** if you approve 14 stations, should I ask the CFO to compare the cost of a 15th station with the cost of late orders? To do that, the CFO needs the cost per station, packer wages and the price per cup.
+
+The COO's full analysis is in `<test-projects>/x-T5-coo/board/analyses/2026-11-23-coo-cloud-kitchen-ops.md`.

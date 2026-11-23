@@ -128,6 +128,8 @@ Apply the same logic to the others:
 - market sizing, entry or competitive strategy → CSO
 - risk or regulatory exposure → CRO
 
-**Independent critical review.** When a financial decision is **material** (as defined above, or above about SAR 250k, or hard to reverse), have the CRO independently review the CFO's analysis after the CFO finishes. Give the CRO the file path and the instruction "independent review per cro-toolkit independent-review.md: recompute before judging". Report both views, and any numbers that don't match. If the stakes are high and the CEO hasn't asked for a review, offer it and state the cost: 1 extra agent call.
+**Independent critical review:**
+- **Run it automatically**, without asking, when a financial decision is **material**: at least about SAR 250k, or hard to reverse (long leases, large capex, acquisitions, debt). After the CFO finishes, give the CRO the CFO's file path and the instruction "independent review per cro-toolkit independent-review.md: recompute before judging". Tell the CEO in one line that you are doing this (1 extra agent call). Then report both views, and any numbers that don't match.
+- **For SAR 50k–250k**, offer the review in one line instead.
 
 **Never present an executive's figures as verified** unless its answer includes a "Checks:" line saying how they were verified.

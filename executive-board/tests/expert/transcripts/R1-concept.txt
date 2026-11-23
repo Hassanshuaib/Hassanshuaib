@@ -1,0 +1,3 @@
+COST_USD 0.19
+=== FINAL ===
+**My view (Chief of Staff):** IRR is the discount rate at which a project's NPV equals zero, and it quietly assumes every interim cash flow is reinvested at that same IRR, which often overstates returns. It can also give several answers, or none, when cash flows change sign more than once. MIRR fixes both problems: it compounds positive cash flows at a realistic reinvestment rate (usually the cost of capital), discounts outflows at the finance rate, and always gives one more conservative rate.

@@ -1,0 +1,80 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cfo
+    Bash ls -la /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-3
+== executive-board:cfo
+    Bash boardcalc:recalc_compare,three_statement,three_statement_xlsx
+    Grep
+    Bash boardcalc:three_statement_xlsx
+    Bash boardcalc:three_statement
+    Bash which soffice libreoffice; python3 -c "import openpyxl;print(openpyxl.
+    Read skills/cfo-toolkit/references/three-statement-fsa.md
+    Bash boardcalc:recalc_compare
+    Bash boardcalc:recalc_compare
+    Write board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
+    Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
+    Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Edit board/analyses/calc/2026-11-23-cfo-alwaha-3statement.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Bash python3 -c " r0=24e6;c0=r0*0.62;r1=28.32e6;c1=r1*0.62 d0=dict(dso=2.6e
+    Write board/analyses/2026-11-23-cfo-alwaha-3statement.md
+COST_USD 1.12
+=== FINAL ===
+The CFO built the model. Al-Waha makes a profit every year, but in Year 1 its cash doesn't cover the plan. It needs a revolver that peaks at **SAR 1.70m in Year 2**, and SAR 1.23m is still owed at the end of Year 3. The balance sheet balances in all three years. All figures are illustrative and in SAR.
+
+| SAR | Y1 | Y2 | Y3 |
+|---|---:|---:|---:|
+| Revenue | 28,320,000 | 31,718,400 | 34,255,872 |
+| EBITDA | 4,531,200 | 5,074,944 | 5,480,940 |
+| Net income | 2,334,720 | 2,626,516 | 2,896,550 |
+| Cash flow from operations | 2,401,854 | 3,407,372 | 3,902,501 |
+| Free cash flow (after capex) | (146,946) | 1,187,084 | 2,189,708 |
+| Ending cash (held at the 1.5m minimum) | 1,500,000 | 1,500,000 | 1,500,000 |
+| Revolver | 1,230,626 | 1,700,170 | 1,234,600 |
+| Term debt | 5,000,000 | 4,000,000 | 3,000,000 |
+| Equity | 9,751,040 | 11,720,927 | 13,893,340 |
+| Balance check: assets − (liabilities + equity) | 0 | 0 | 0 |
+| Cash check: cash-flow statement − balance sheet | 0 | 0 | 0 |
+
+**Profit versus cash**
+- Net income over the three years is 7.86m, but free cash flow is only 3.23m.
+- Term-debt repayments and dividends need 4.96m. The gap is covered by running cash down to the 1.5m minimum and by the revolver.
+- **Working capital** absorbs 1.92m over the three years, 1.07m of it in Year 1.
+  - About 0.53m of that is not caused by growth. The opening balance sheet implies 46.6 days of inventory and 36.8 days of payables, but the drivers are 55 and 35. Year 1 therefore builds about 8 extra days of inventory.
+- **Capex is higher than D&A** in every year, by 1.42m, 0.95m and 0.34m. This is the second big drain.
+
+**Funding implications**
+- **Dividend:** free cash flow doesn't cover the 25% payout in Year 1, so in effect the dividend is paid from the revolver.
+  - With no dividend, the revolver would peak at only 0.65m.
+  - At a 50% payout it would peak at 3.27m.
+- **Downside case:** growth of 10%, 6% and 3%, a 35% gross margin and 50 days to collect from customers would push the revolver to 3.48m, still rising in Year 3.
+- **What moves the peak most:** gross margin and the dividend payout. Each extra 10 days that customers take to pay adds about 0.9m.
+
+**The CFO's recommendation (medium confidence)** is to go ahead only if:
+1. A committed revolver of at least SAR 3.5m is in place.
+2. The Year 1 dividend is deferred, and future payouts are tied to free cash flow after debt payments.
+3. Operations confirms the 55 inventory days and 35 payables days.
+4. Year 1 capex is phased.
+
+The plan should be revisited if the revolver is still rising in Year 3, gross margin falls below 35%, customers take more than 50 days to pay, or net debt exceeds 2.0× EBITDA.
+
+**Modelling choices:** EBITDA is gross profit minus opex. Dividends are paid only when net income is positive, in the same year. Because interest is charged on opening balances, the model has no circular references.
+
+**Checks:** The CFO reports that the workbook has 214 live formulas and recalculates in LibreOffice with no errors. A separate Python rebuild matches the Excel values. The checks above are zero in every year. Two limits on verification:
+- I spot-checked Year 1 by hand, and my revolver draw (about 1.23m) agrees.
+- The downside and dividend cases were run only in Python. They are not in the workbook.
+
+**Not yet modelled:**
+- The revolver's size, covenants and fees
+- How much of the capex is maintenance
+- Seasonal working-capital peaks within the year
+- Zakat in place of the 20% tax, and the timing of VAT (these need a tax adviser)
+
+Files are in `<test-projects>/x-T1-three-statement/board/analyses/`:
+- `2026-11-23-cfo-alwaha-3statement.xlsx`
+- `2026-11-23-cfo-alwaha-3statement.md`
+- `calc/2026-11-23-cfo-alwaha-3statement.py`
+
+The question for you is whether a 25% dividend in Year 1 is worth funding with debt. I can also ask the operations lead (COO) to test the inventory and payables days, or have the risk lead (CRO) review the CFO's model independently. Each is one extra analysis.

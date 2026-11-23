@@ -27,6 +27,9 @@ Everything ships as a single **Claude Code plugin** (`executive-board/`), publis
 | `skills/board-council` | Tiered deliberation (Lite / Standard / Deep) |
 | `skills/board-memory` | Creates `board/` and records decisions, assumptions and actions |
 | `skills/board-report` | Report workflow that delegates to the Secretary |
+| `skills/{cfo,coo,cmo,cso,cro}-toolkit` | Per-executive index, quality gates and `references/*.md`. Each is preloaded into its agent through the `skills:` frontmatter; references are read on demand |
+| `scripts/boardcalc.py` | Verified calculation engine (`list`, `doc <fn>`, `<fn> '<json>'`), tested by `tests/test_boardcalc.py` (36 tests) |
+| `../board-finance-pack/` | Optional plugin: 7 Anthropic Apache-2.0 skills, vendored unmodified (see its NOTICE.md) |
 | `scripts/init_board.py` | Creates `board/` from `templates/board/`. Never overwrites. Optional `--gitignore` and `--default-agent` |
 | `scripts/make_report.py` | Markdown → DOCX (Arabic RTL), PDF (via LibreOffice; reportlab fallback for non-Arabic), XLSX (one sheet per table, numbers typed). Prints JSON of the files that really exist |
 | `templates/board/` | Memory skeleton, including the decision-record template with every required field |
@@ -101,9 +104,10 @@ Further optional levers:
 ## 5. Adding a new executive (for example a General Counsel or CHRO)
 
 1. Copy `agents/cso.md` to `agents/clo.md`. Change `name`, `description` (say when to use it), `color`, the role paragraph and the Method. Keep the "Board standards" block.
-2. Add a row to the table in section 1 of `agents/chief-of-staff.md`.
-3. Bump `version` in `.claude-plugin/plugin.json`, commit and push, then run `/plugin marketplace update hassan-board`.
-4. Check that `/agents` lists `executive-board:clo`.
+2. Optionally, create `skills/clo-toolkit/SKILL.md` (index + quality gates) with a `references/` folder. Add it to the agent's frontmatter as `skills: [executive-board:clo-toolkit]` and add `Skill` to its tools. Put any new calculation in `scripts/boardcalc.py`, with a test in `tests/test_boardcalc.py`.
+3. Add a row to the table in section 1 of `agents/chief-of-staff.md`.
+4. Bump `version` in `.claude-plugin/plugin.json`, commit and push, then run `/plugin marketplace update hassan-board`.
+5. Check that `/agents` lists `executive-board:clo`.
 
 ## 6. Maintenance
 

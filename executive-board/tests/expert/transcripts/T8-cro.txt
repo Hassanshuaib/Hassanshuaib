@@ -1,0 +1,71 @@
+== MAIN (chief of staff)
+    Glob
+    Read board/context.md
+    Read board/analyses/2026-11-20-cfo-expansion.md
+    Agent -> executive-board:cro
+    Bash ls -la board/analyses board/analyses/calc
+== executive-board:cro
+    Read skills/cro-toolkit/references/independent-review.md
+    Read board/analyses/2026-11-20-cfo-expansion.md
+    Bash find . -type f | head -50 && cat board/context.md
+    Bash cd /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Bash python3 -I -c " import openpyxl f='/tmp/claude-0/-home-user-Hassanshua
+    Read board/assumptions.md
+    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Read skills/cfo-toolkit/references/model-review.md
+    Bash boardcalc:list
+    Bash cd /home/user/Hassanshuaib/executive-board/scripts && for f in npv irr
+    Bash boardcalc:breakeven_input,montecarlo,project,recalc_compare,stress
+    Grep
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Bash which soffice libreoffice; grep -n "^def _bisect\|^def _f\|^def _clean
+    Bash which soffice libreoffice || echo "no soffice"
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Write board/analyses/calc/2026-11-23-cro-review-expansion.py
+    Bash python3 -I /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-ae
+    Bash boardcalc:irr,mirr,npv
+    Write <scratch>
+    Bash python3 -I /tmp/claude-0/-tmp-claude-0--home-user-Hassanshuaib-bd082b9
+    Bash boardcalc:risk_register
+    Write board/analyses/2026-11-23-cro-review-expansion.md
+COST_USD 1.18
+=== FINAL ===
+**Bottom line:** Don't approve next week on this analysis. The CRO (Chief Risk Officer) found its headline numbers can't be reproduced and that all of its value comes from the terminal value: the estimated value of every year after year 5. That's a verdict on the analysis, not on the expansion, which may still be worth doing.
+
+**Consulted:** only the CRO. The CFO hasn't responded to these findings yet. The CRO and CFO are the same underlying model working from different briefs, so this is an independent angle, not an independent model.
+
+**The numbers:**
+
+| | CFO memo | CRO recompute |
+|---|---|---|
+| NPV | SAR 80.7m | SAR 70.2m from the memo's own cash flows; SAR 62.9m from the spreadsheet |
+| IRR | 34% | 7.0% without the terminal value, below the 11% hurdle (95.5% with it, but IRR isn't reliable for these cash flows) |
+| NPV without the terminal value | not shown | **−SAR 0.64m**: the five forecast years lose money |
+| Terminal value as a share of NPV | not shown | 101% |
+
+**Critical problems:**
+- **Debt is missing.** The memo says the cash flows are after the SAR 3.0m loan, but they're just EBITDA minus capex: no interest or repayments. They're also discounted at the wrong rate.
+- **Growth isn't evidenced.** The 45% a year growth rests only on "management is confident".
+- **Unsupported assumptions:** tax and zakat are set to 0%, nothing is set aside for repeat refits, and there's no margin ramp-up.
+- **Spreadsheet errors:** the NPV formula is off by about SAR 6.9m, and year-5 EBITDA is typed in rather than calculated.
+
+**Biggest risk:** demand. In the CRO's adjusted case (illustrative assumptions), NPV falls to zero if growth is about 17% a year instead of 45%, or the margin is 11.7% instead of 25%. Its simulation, also on illustrative ranges, gives about a 53% chance that NPV is below zero.
+
+**Recommended decision:** postpone approval until the CFO rebuilds the model. Confidence that the current analysis isn't fit to decide on: High. That changes if a rebuilt model stays positive on one consistent basis and there's real demand evidence for growth well above 17%.
+
+**What the rebuild needs:**
+- one consistent cash-flow basis with a full loan schedule
+- a realistic terminal value, with NPV shown with and without it
+- bottom-up demand and margin ramp-up
+- tax and zakat confirmed by a licensed Saudi tax adviser
+- a maintenance and refit schedule
+- downside, base and upside cases with break-even growth and margin
+- the cash position around year 3
+
+**Next step:** shall I send the CRO's list to the CFO for a rebuild, then have the CRO re-check it? That's 2 more analyses and fits before next week. I can also log this in the decision register as "Proposed — on hold pending rebuild".
+
+Files are in `board/analyses/`:
+- `2026-11-23-cro-review-expansion.md` (the full review)
+- `calc/2026-11-23-cro-review-expansion.py` (the calculation script)

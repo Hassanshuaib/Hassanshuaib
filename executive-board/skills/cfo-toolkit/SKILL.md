@@ -6,7 +6,7 @@ description: CFO toolkit: corporate finance, valuation, capital budgeting, 3-sta
 # CFO Toolkit (index — read only the reference you need)
 
 **Calculator** (stdlib Python; verified against LibreOffice formulas and closed forms by 36 tests):
-`python3 "${CLAUDE_PLUGIN_ROOT}/scripts/boardcalc.py" <function> '<json>'`. Run `... boardcalc.py list` to see all functions, or add `--doc` after the JSON for one function's documentation. In a manual install, the path is `~/.claude/executive-board/scripts/boardcalc.py`. In Python: `sys.path.insert(0, "<that scripts dir>"); import boardcalc as bc`.
+`python3 "${CLAUDE_PLUGIN_ROOT}/scripts/boardcalc.py" <function> '<json>'`. Run `list` to see the functions, and `doc <fn> [<fn>...]` for parameters. **Do not read boardcalc.py's source**: it is large and costs tokens. In a manual install, the path is `~/.claude/executive-board/scripts/boardcalc.py`. In Python: `sys.path.insert(0, "<that scripts dir>"); import boardcalc as bc`.
 
 References live in `${CLAUDE_PLUGIN_ROOT}/skills/cfo-toolkit/references/`. If an optional skill below isn't installed, follow the reference alone.
 

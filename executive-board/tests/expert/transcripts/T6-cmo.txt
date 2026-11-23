@@ -1,0 +1,71 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cmo
+== executive-board:cmo
+    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash boardcalc:list
+    Bash cd /home/user/Hassanshuaib/executive-board/scripts; for f in ab_test a
+    Bash boardcalc:ab_sample_size,ab_test,ltv,norm_cdf,price_change_breakeven,subscription_price_change
+    Bash boardcalc:ab_sample_size,ab_test,ltv,price_change_breakeven,subscription_price_change
+    Grep
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Read /home/user/Hassanshuaib/executive-board/scripts/boardcalc.py
+    Bash ls /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-31c34
+    Write board/analyses/calc/2026-11-23-cmo-checkout-pricing.py
+    Bash boardcalc:ab_test
+    Write board/analyses/2026-11-23-cmo-checkout-pricing.md
+    Bash boardcalc:norm_cdf
+    Edit board/analyses/2026-11-23-cmo-checkout-pricing.md
+    Edit board/analyses/calc/2026-11-23-cmo-checkout-pricing.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+COST_USD 0.8
+=== FINAL ===
+I wouldn't roll out the variant yet: the "+12%" result isn't statistically significant. The price rise to 89 has room to absorb some extra churn, but test it on new signups before rolling it out.
+
+**Who was consulted:** the CMO (`executive-board:cmo`). All inputs are your fictional figures. I re-checked the main numbers by hand and they match. The CMO's "Checks:" line says it used the board calculator and cross-checked with a simulation.
+
+**(a) Checkout A/B test**
+- Conversion is 4.10% for control and 4.61% for the variant, a +12.5% relative lift.
+- z = 1.27 and **p = 0.20**, so it is not significant.
+- The 95% range for the lift runs from **−6% to +35%**. The variant could actually be worse.
+- The test only had about **25% power**. A test that weak tends to overstate the lift it finds.
+- Detecting a 10% relative lift (α 0.05, power 0.8) needs **about 38,500 visitors per arm**, roughly 77k in total. You have about 5k per arm now.
+
+**(b) Unit economics**
+
+| Metric | Value |
+|---|---|
+| Gross profit per subscriber per month | 51.35 SAR |
+| LTV, undiscounted | 1,141 SAR |
+| LTV, discounted at 1% | 934 SAR |
+| LTV:CAC | 3.7x undiscounted, **3.0x discounted** |
+| CAC payback | **6.0 months** |
+
+These are healthy numbers, but not a lot of headroom if churn rises.
+
+**(c) Price increase, 79 → 89**
+- **MRR stays the same if you lose up to 11.2% of subscribers straight away.**
+- **Steady-state gross profit stays the same if monthly churn rises to:**
+  - **5.38%** if cost per subscriber stays fixed at 27.65 SAR. The CMO recommends this view, since coffee costs don't rise with the price.
+  - **5.07%** if margin is held at 65% of price. The CMO suggests treating this as the stricter limit until the CFO confirms costs.
+- **This assumes the same number of new subscribers per month at 89.** That is optimistic: a higher price on the checkout page will probably lower conversion. This is the biggest risk in the price case.
+- **If churn doesn't change at 89:** LTV:CAC rises to 3.6x and payback drops to 5.1 months.
+
+**Recommendation**
+1. **Checkout variant:** Confidence: High.
+   - Keep the test running to about 38.5k visitors per arm.
+   - Fix the stopping rule in advance and don't check results early.
+   - Measure paid conversion, and watch refunds and first-month churn alongside it.
+2. **Price 89:** Confidence: Medium.
+   - Run 79 vs 89 on new signups only, and judge it on gross profit per visitor.
+   - Keep it separate from the checkout test so the two effects don't mix.
+   - Limits: conversion should fall by less than about 16% relative, and churn in months 1–2 should stay below about 5.1–5.4%. The 16% limit assumes churn doesn't change.
+   - Only then move existing subscribers. Give them 2–3 months' notice at the old price and start with 10–20% of them.
+
+The confidence would drop if cost per subscriber turns out to rise with price, or if conversion or churn at 89 come in worse than those limits.
+
+**Next step:** should I ask the CFO to confirm whether cost per subscriber stays fixed? That's 1 extra agent call, and it decides whether the churn limit is 5.07% or 5.38%.
+
+Files are in `<test-projects>/x-T6-cmo/board/analyses/`:
+- `2026-11-23-cmo-checkout-pricing.md`
+- `calc/2026-11-23-cmo-checkout-pricing.py`

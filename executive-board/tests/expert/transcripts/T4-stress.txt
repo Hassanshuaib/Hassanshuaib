@@ -1,0 +1,72 @@
+== MAIN (chief of staff)
+    Agent -> executive-board:cfo
+    Bash python3 -c " r=0.11;rev=[40000*1.05**i*95*1.02**i for i in range(6)];f
+== executive-board:cfo
+    Bash boardcalc:irr,list,npv,payback
+    Bash B=/home/user/Hassanshuaib/executive-board/scripts/boardcalc.py; python
+    Bash boardcalc:irr,list,npv,payback
+    Bash boardcalc:irr,npv,payback
+    Write board/analyses/calc/2026-11-23-cfo-project-a-stress-test.py
+    Bash python3 /tmp/claude-0/-home-user-Hassanshuaib/bd082b9f-f94c-55be-aec6-
+    Write board/analyses/2026-11-23-cfo-project-a-stress-test.md
+COST_USD 0.77
+=== FINAL ===
+**Bottom line:** At the base case, Project A creates value: NPV is SAR 1.75m, IRR is 27.4% against an 11% hurdle, and it pays back in 3.2 years. It holds up when any single driver moves by 10%. It goes negative when several moderate shocks hit together. The real risk is a weak market across price, volume and cost at once, not any one driver.
+
+**Consulted:** the CFO. I also recomputed the base case myself with a separate script, and the cash flows and NPV (1,748,169) match exactly. All inputs are your fictional figures.
+
+**Base case:** I told the CFO to put each year's working capital in place at the start of that year, so the year-1 balance is funded at t=0. Under the other timing, NPV is 1.81m, so the base case is the more conservative one.
+- Cash flows from t0 to t6: −2.856m, then +0.80m, 0.88m, 0.96m, 1.04m, 1.13m and 2.08m.
+- Discounted payback is 4.05 years.
+
+**1. Tornado (NPV when each driver moves 10% down / 10% up)**
+
+| Driver | NPV at −10% | NPV at +10% | Swing |
+|---|---|---|---|
+| Variable cost % (52.2% / 63.8%) | 2.62m | 0.87m | **1.75m** |
+| Year-1 price | 1.14m | 2.36m | 1.22m |
+| Year-1 volume | 1.14m | 2.36m | 1.22m |
+| Fixed cost | 1.98m | 1.51m | 0.47m |
+| Capex | 1.95m | 1.54m | 0.41m |
+
+Price and volume give identical results because revenue is price × volume. The biggest swing is variable-cost %, because a 10% change there (5.8 points) cuts the 42% contribution margin by about 14%.
+
+**2. Reverse stress test**
+- **Break-even price:** NPV reaches zero at a year-1 price of 67.66, giving **28.8% headroom** below 95.
+- **Break-even volume:** NPV reaches zero at 28,489 units, also **28.8% headroom** below 40,000.
+
+**3. Combined downside (all four shocks together)**
+- NPV is **−0.79m**.
+- IRR is 2.1%.
+- Simple payback is 5.8 years, and on a discounted basis it never pays back.
+
+Each shock on its own is survivable. Together they wipe out the whole 1.75m of value and lose about 0.8m more.
+
+**4. Monte Carlo (20,000 runs)**
+- **Mean NPV:** 1.50m (median 1.47m).
+- **P(NPV < 0):** 5.1%.
+- **5th percentile:** −13k. The 95th percentile is 3.09m.
+
+The mean is about 0.25m below the base case because the distributions you set lean against the project. The average price is 93.3 rather than 95, and the average variable cost is 59% rather than 58%. The base case uses the most likely values, so it is somewhat optimistic.
+
+**What this means for you**
+1. **Margin decides this project, not capex.** Capex is the smallest driver. The most valuable thing management can do is lock in the variable-cost ratio through supplier contracts and pricing terms.
+2. **The 29% headroom on price or volume is comfortable.** The danger is that weak price and weak volume usually come together.
+3. **The 5% loss probability is probably too low.** The simulation draws price, volume and cost independently, as you specified. In a real downturn, price and volume tend to fall together, which makes the left tail fatter. A correlated rerun would likely give a materially higher loss probability. That is my view, not a computed figure.
+4. **The CFO's recommendation:** go ahead only if two things are true:
+   - variable cost is contractually secured at 60% or below;
+   - demand evidence supports at least about 34,000 units in year 1.
+
+   Stop if committed variable cost goes above 62%, or if validated volume is below about 30,000 at a price under 90.
+
+**Confidence:** Medium, because the inputs are illustrative. The tax treatment (20% rate, zakat, VAT) needs confirmation from a tax adviser.
+
+**Next step:** With 2.4m of capex, this counts as a material decision. Two options, which can be combined:
+- **CRO review:** an independent review of the CFO's analysis (1 extra agent call).
+- **Correlated Monte Carlo:** a rerun with correlated price and volume, about −0.5 (1 short CFO follow-up).
+
+Do you want either?
+
+Files are in `<test-projects>/x-T4-stress/board/analyses/`:
+- 2026-11-23-cfo-project-a-stress-test.md
+- calc/2026-11-23-cfo-project-a-stress-test.py
